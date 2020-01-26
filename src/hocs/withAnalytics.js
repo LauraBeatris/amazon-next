@@ -9,7 +9,7 @@ export default () => Composed =>  {
 
         componentDidMount(){ 
             if (process.env.NODE_ENV === 'production'){ 
-                ReactGA.initialize("ID_ANALYTICS")
+                ReactGA.initialize(process.env.GA_ID)
                 ReactGA.pageview(window.location.pathname)
             }
         }
