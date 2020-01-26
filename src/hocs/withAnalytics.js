@@ -1,21 +1,22 @@
-import { Component } from 'react'
-import ReactGA from 'react-ga'
+import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 
-export default () => Composed =>  {
+export default () => Composed => {
     return class extends Component {
-        static getInitialProps(ctx) { 
-            return Composed.getInitialProps(ctx)
-        }  
+        static getInitialProps(ctx) {
+            if (Composed.getInitialProps) return Composed.getInitialProps(ctx);
+            return {};
+        }
 
-        componentDidMount(){ 
-            if (process.env.NODE_ENV === 'production'){ 
-                ReactGA.initialize(process.env.GA_ID)
-                ReactGA.pageview(window.location.pathname)
+        componentDidMount() {
+            if (process.env.NODE_ENV === 'production') {
+                ReactGA.initialize(process.env.GA_ID);
+                ReactGA.pageview(window.location.pathname);
             }
         }
-        
-        render(){ 
-            return <Composed {...this.props} />
+
+        render() {
+            return <Composed {...this.props} />;
         }
-    }
-}
+    };
+};
