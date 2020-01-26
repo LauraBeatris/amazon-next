@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "npm run build && next export",
+    "deploy": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Laura Beatris",
