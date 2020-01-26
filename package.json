@@ -1,25 +1,20 @@
 {
-  "name": "next-starter-tailwind",
-  "version": "1.0.5",
-  "description": "Next.js starter styled with Tailwind CSS",
+  "name": "amazon-next",
+  "description": "An amazon clone with NextJS",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "npm run build && next export",
     "start": "next start",
+    "export": "npm run build && next export",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taylorbryant/next-starter-tailwind.git"
   },
-  "author": "Taylor Bryant",
+  "author": "Laura Beatris",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/taylorbryant/next-starter-tailwind/issues"
-  },
-  "homepage": "https://github.com/taylorbryant/next-starter-tailwind#readme",
   "dependencies": {
     "next": "9.2.1",
     "react": "16.12.0",
