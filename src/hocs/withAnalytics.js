@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 
 export default () => Composed => {
-    return class extends Component {
-        static getInitialProps(ctx) {
-            if (Composed.getInitialProps) return Composed.getInitialProps(ctx);
-            return {};
-        }
-
+    class withAnalytics extends Component {
         componentDidMount() {
             if (process.env.NODE_ENV === 'production') {
                 ReactGA.initialize(process.env.GA_ID);
@@ -18,5 +13,12 @@ export default () => Composed => {
         render() {
             return <Composed {...this.props} />;
         }
-    };
+    }
+
+    if (Composed.getInitialProps)
+        withAnalytics.getInitialProps = ctx => {
+            return Composed.getInitialProps(ctx);
+        };
+
+    return withAnalytics;
 };
