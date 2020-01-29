@@ -3,3 +3,14 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+.layout-menu {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+
+    @media (max-width: 1000px) {
+        display: flex;
+    }
+}
+
+
