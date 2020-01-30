@@ -4,7 +4,8 @@
         "name": "",
         "price": 10000,
         "stars": 5,
-        "type": ["computers", "technologies"]
+        "type": ["computers", "technologies"],
+        "tags": ["cheep"]
     }, {
         "id": 2,
         "name": "",

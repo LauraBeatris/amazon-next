@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import api from '~/services/api';
 import Layout from '~/layout';
 import withAnalytics from '~/hocs/withAnalytics';
+import Product from '~/components/Product';
 
 function Home({ productList, error }) {
     const [showErrorMessage, setErrorMessage] = useState(!!error);
@@ -28,7 +29,7 @@ function Home({ productList, error }) {
                             </h2>
                             {productList.computersAndAccessories.map(
                                 product => (
-                                    <p> product </p>
+                                    <Product product={product} />
                                 )
                             )}
                         </div>
@@ -38,7 +39,7 @@ function Home({ productList, error }) {
                                 Video Games{' '}
                             </h2>
                             {productList.videoGames.map(product => (
-                                <p> product </p>
+                                <Product product={product} />
                             ))}
                         </div>
 
@@ -48,7 +49,7 @@ function Home({ productList, error }) {
                                 Amazon Top Sellers{' '}
                             </h2>
                             {productList.topSellers.map(product => (
-                                <p> product </p>
+                                <Product product={product} />
                             ))}
                         </div>
                     </>

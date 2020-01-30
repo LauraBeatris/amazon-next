@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import Tag from '~/components/Tag';
 
 export default function Product({ product }) {
+    const newProductData = { tags: [], ...product };
     const stars = useMemo(() => {
         const initial = [];
-        for (star of product.stars) {
+        for (star in product.stars) {
             initial.push(<p> star </p>);
         }
         return initial;
@@ -16,21 +17,21 @@ export default function Product({ product }) {
         <div className="flex flex-row rounded-lg shadow">
             <div>
                 <img
-                    src={product.url}
-                    alt={product.name}
-                    aria-label={product.name}
+                    src={newProductData.url}
+                    alt={newProductData.name}
+                    aria-label={newProductData.name}
                 />
             </div>
 
             <div className="flex flex-col">
                 <div className="flex flex-row mb-5">
-                    {product.tags.map(tag => (
+                    {newProductData.tags.map(tag => (
                         <Tag name={tag} />
                     ))}
                 </div>
 
                 <strong className="text-xl text-gray-800">
-                    {product.name}
+                    {newProductData.name}
                 </strong>
 
                 <div className="flex flex-row">

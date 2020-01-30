@@ -3,9 +3,9 @@
   "description": "An amazon clone with NextJS",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "npm-run-all --parallel server & next",
     "build": "next build",
-    "start": "next start",
+    "start": "npm-run-all --parallel server & next start",
     "export": "npm run build && next export",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "json-server --watch db.json --port=8080"
