@@ -26,7 +26,7 @@
         "name": "LEGO DUPLO Big Construction Site",
         "price": 3799,
         "stars": 5,
-        "type": ["toys", "children"],
+        "type": ["toys", "top-sellers"],
         "image": "https://images-na.ssl-images-amazon.com/images/I/811sHzK0hKL._AC_SX522_.jpg"
     },  {
         "id": 5,
