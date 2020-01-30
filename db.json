@@ -1,0 +1,33 @@
+{
+    "products": [{
+        "id": 1,
+        "name": "",
+        "price": 10000,
+        "stars": 5,
+        "type": ["computers", "technologies"]
+    }, {
+        "id": 2,
+        "name": "",
+        "price": 10000,
+        "stars": 5,
+        "type": ["videogames"]
+    }, {
+        "id": 3,
+        "name": "",
+        "price": 10000,
+        "stars": 5,
+        "type": ["top-sellers", "accessories"]
+    }, {
+        "id": 4,
+        "name": "",
+        "price": 10000,
+        "stars": 5,
+        "type": ["toys", "children"]
+    },  {
+        "id": 5,
+        "name": "",
+        "price": 10000,
+        "stars": 5,
+        "type": ["toys", "videogames"]
+    }]
+}
