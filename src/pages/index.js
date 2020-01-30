@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import api from '~/services/api';
 import Layout from '~/layout';
 import withAnalytics from '~/hocs/withAnalytics';
-import Product from '~/components/Product';
+import ProductList from '~/components/ProductList';
 
 function Home({ productList, error }) {
     const [showErrorMessage, setErrorMessage] = useState(!!error);
@@ -27,20 +27,22 @@ function Home({ productList, error }) {
                                 {' '}
                                 Computers and Accessories{' '}
                             </h2>
-                            {productList.computersAndAccessories.map(
-                                product => (
-                                    <Product product={product} />
-                                )
-                            )}
+                            <div className="flex flex-row my-4">
+                                <ProductList
+                                    type="computersAndAccessories"
+                                    productList={productList}
+                                />
+                            </div>
                         </div>
                         <div className="mb-5">
                             <h2 className="text-2xl text-gray-800 font-bold">
                                 {' '}
                                 Video Games{' '}
                             </h2>
-                            {productList.videoGames.map(product => (
-                                <Product product={product} />
-                            ))}
+                            <ProductList
+                                type="videoGames"
+                                productList={productList}
+                            />
                         </div>
 
                         <div className="mb-5">
@@ -48,9 +50,11 @@ function Home({ productList, error }) {
                                 {' '}
                                 Amazon Top Sellers{' '}
                             </h2>
-                            {productList.topSellers.map(product => (
-                                <Product product={product} />
-                            ))}
+
+                            <ProductList
+                                type="topSellers"
+                                productList={productList}
+                            />
                         </div>
                     </>
                 ) : (

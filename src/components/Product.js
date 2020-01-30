@@ -1,25 +1,35 @@
 import React, { useMemo } from 'react';
+import { useRouter } from 'next/router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
 import Tag from '~/components/Tag';
+import Button from '~/components/Button';
 
 export default function Product({ product }) {
+    const router = useRouter();
     const newProductData = { tags: [], ...product };
     const stars = useMemo(() => {
         const initial = [];
-        for (star in product.stars) {
-            initial.push(<p> star </p>);
+        for (let i = 1; i < product.stars; i++) {
+            initial.push(<FontAwesomeIcon icon={faStar} color="yellow" />);
         }
         return initial;
     }, [product.stars]);
 
+    function handleClick() {
+        return router.push('/details');
+    }
+
     return (
-        <div className="flex flex-row rounded-lg shadow">
+        <div className="flex flex-row rounded-lg max-w-400">
             <div>
                 <img
-                    src={newProductData.url}
+                    src={newProductData.image}
                     alt={newProductData.name}
                     aria-label={newProductData.name}
+                    className="max-w-200 max-h-200"
                 />
             </div>
 
@@ -41,6 +51,14 @@ export default function Product({ product }) {
                         <span className="font-bold text-gray-800">$800.00</span>
                     </div>
                 </div>
+
+                <Button
+                    handleClick={handleClick}
+                    title="Click to see more details about this product"
+                >
+                    {' '}
+                    More details{' '}
+                </Button>
             </div>
         </div>
     );

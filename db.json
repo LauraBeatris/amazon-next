@@ -1,34 +1,38 @@
 {
     "products": [{
         "id": 1,
-        "name": "",
-        "price": 10000,
+        "name": "Acer Aspire 5 Slim Laptop",
+        "price": 31392,
         "stars": 5,
         "type": ["computers", "technologies"],
-        "tags": ["cheep"]
+        "tags": ["cheep"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71vvXGmdKWL._AC_SX679_.jpg"
     }, {
         "id": 2,
-        "name": "",
-        "price": 10000,
+        "name": "DualShock 4 Wireless Controller for PlayStation 4 - Magma Red",
+        "price": 4696,
         "stars": 5,
-        "type": ["videogames"]
+        "type": ["videogames"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61Na4U9J8%2BL._AC_.jpg"
     }, {
         "id": 3,
-        "name": "",
-        "price": 10000,
+        "name": "Fjallraven - Kanken Classic Backpack for Everyday",
+        "price": 7995,
         "stars": 5,
-        "type": ["top-sellers", "accessories"]
+        "type": ["top-sellers", "accessories"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71gjJZ4Df2L._AC_UX679_.jpg"
     }, {
         "id": 4,
-        "name": "",
-        "price": 10000,
+        "name": "LEGO DUPLO Big Construction Site",
+        "price": 3799,
         "stars": 5,
-        "type": ["toys", "children"]
+        "type": ["toys", "children"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/811sHzK0hKL._AC_SX522_.jpg"
     },  {
         "id": 5,
-        "name": "",
-        "price": 10000,
+        "name": "Disney Pixar Toy Story Blast-Off Buzz",
+        "price": 1298,
         "stars": 5,
-        "type": ["toys", "videogames"]
+        "type": ["toys"]
     }]
 }
