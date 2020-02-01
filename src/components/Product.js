@@ -13,18 +13,29 @@ export default function Product({ product }) {
     const stars = useMemo(() => {
         const initial = [];
         for (let i = 1; i < product.stars; i++) {
-            initial.push(<FontAwesomeIcon icon={faStar} color="yellow" />);
+            initial.push(
+                <FontAwesomeIcon
+                    key={i}
+                    size="lg"
+                    className="w-5"
+                    icon={faStar}
+                    color="yellow"
+                />
+            );
         }
         return initial;
     }, [product.stars]);
 
     function handleClick() {
-        return router.push('/details');
+        return router.push({
+            pathname: '/details',
+            query: { productId: product.id },
+        });
     }
 
     return (
-        <div className="flex flex-row rounded-lg max-w-400">
-            <div>
+        <div className="h-180 mr-4 flex flex-row rounded-lg max-w-400">
+            <div className="flex items-center mr-4">
                 <img
                     src={newProductData.image}
                     alt={newProductData.name}
@@ -33,24 +44,21 @@ export default function Product({ product }) {
                 />
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col justify-between">
+                <strong className="max-w-240 truncate text-xl text-gray-800">
+                    {newProductData.name}
+                </strong>
                 <div className="flex flex-row mb-5">
                     {newProductData.tags.map(tag => (
                         <Tag name={tag} />
                     ))}
                 </div>
-
-                <strong className="text-xl text-gray-800">
-                    {newProductData.name}
-                </strong>
-
                 <div className="flex flex-row">
-                    <div>{stars}</div>
-
                     <div>
                         <span className="font-bold text-gray-800">$800.00</span>
                     </div>
                 </div>
+                <div className="flex flex-row">{stars}</div>
 
                 <Button
                     handleClick={handleClick}
@@ -66,6 +74,7 @@ export default function Product({ product }) {
 
 Product.propTypes = {
     product: PropTypes.shape({
+        id: PropTypes.number,
         name: PropTypes.string,
         url: PropTypes.string,
         tags: PropTypes.array,

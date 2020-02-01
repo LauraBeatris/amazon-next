@@ -9,7 +9,7 @@ import {
 
 export default function LateralMenu() {
     return (
-        <div className="hidden py-8 lg:flex flex-col justify-between items-center h-screen shadow-lg">
+        <div className="hidden py-8 lg:flex flex-col justify-between items-center h-full shadow-lg">
             <Link href="/">
                 <img
                     src="/static/amazon.png"

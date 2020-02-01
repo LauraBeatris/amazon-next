@@ -8,7 +8,13 @@
     display: grid;
     grid-template-columns: 80px 1fr;
 
-    @media (max-width: 1000px) {
+
+
+
+}
+
+@media (max-width: 1000px) {
+    .layout-menu {
         display: flex;
     }
 }

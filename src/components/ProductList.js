@@ -7,13 +7,11 @@ import Slider from '~/components/Slider';
 export default function ProductList({ productList, type }) {
     return (
         <div className="flex flex-row my-4">
-            <Slider>
-                {productList[type].map(product => (
-                    <div>
-                        <Product product={product} />
-                    </div>
-                ))}
-            </Slider>
+            {/* <Slider> */}
+            {productList[type].map(product => (
+                <Product product={product} />
+            ))}
+            {/* </Slider> */}
         </div>
     );
 }
