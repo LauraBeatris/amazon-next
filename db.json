@@ -14,7 +14,7 @@
         "stars": 5,
         "type": ["videogames"],
         "image": "https://images-na.ssl-images-amazon.com/images/I/61Na4U9J8%2BL._AC_.jpg"
-    }, {
+    },{
         "id": 3,
         "name": "Fjallraven - Kanken Classic Backpack for Everyday",
         "price": 7995,
@@ -34,5 +34,69 @@
         "price": 1298,
         "stars": 5,
         "type": ["toys"]
+    }, {
+        "id": 6,
+        "name": "DualShock 4 Wireless Controller for PlayStation 4 - Magma Red",
+        "price": 4696,
+        "stars": 5,
+        "type": ["videogames"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61Na4U9J8%2BL._AC_.jpg"
+    }, {
+        "id": 6,
+        "name": "DualShock 4 Wireless Controller for PlayStation 4 - Magma Red",
+        "price": 4696,
+        "stars": 5,
+        "type": ["videogames"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61Na4U9J8%2BL._AC_.jpg"
+    },{
+        "id": 6,
+        "name": "DualShock 4 Wireless Controller for PlayStation 4 - Magma Red",
+        "price": 4696,
+        "stars": 5,
+        "type": ["videogames"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61Na4U9J8%2BL._AC_.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Fjallraven - Kanken Classic Backpack for Everyday",
+        "price": 7995,
+        "stars": 5,
+        "type": ["top-sellers", "accessories"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71gjJZ4Df2L._AC_UX679_.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Fjallraven - Kanken Classic Backpack for Everyday",
+        "price": 7995,
+        "stars": 5,
+        "type": ["top-sellers", "accessories"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71gjJZ4Df2L._AC_UX679_.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Acer Aspire 5 Slim Laptop",
+        "price": 31392,
+        "stars": 5,
+        "type": ["computers", "technologies"],
+        "tags": ["cheep"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71vvXGmdKWL._AC_SX679_.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Acer Aspire 5 Slim Laptop",
+        "price": 31392,
+        "stars": 5,
+        "type": ["computers", "technologies"],
+        "tags": ["cheep"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71vvXGmdKWL._AC_SX679_.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Acer Aspire 5 Slim Laptop",
+        "price": 31392,
+        "stars": 5,
+        "type": ["computers", "technologies"],
+        "tags": ["cheep"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71vvXGmdKWL._AC_SX679_.jpg"
     }]
 }

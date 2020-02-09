@@ -15,7 +15,7 @@ export default function LateralMenu() {
                     src="/static/amazon.png"
                     alt="Amazon"
                     aria-label="Amazon"
-                    className="w-8 h-8 mb-8 rounded-full"
+                    className="w-8 h-8 mb-8 rounded-full cursor-pointer"
                 />
             </Link>
 
@@ -28,7 +28,11 @@ export default function LateralMenu() {
                                     <FontAwesomeIcon
                                         icon={faClipboardList}
                                         size="lg"
-                                        className="text-gray-500 cursor-pointer"
+                                        className={`${
+                                            window.location.pathname === '/'
+                                                ? 'text-gray-600'
+                                                : 'text-gray-500'
+                                        } cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out`}
                                     />
                                 </Link>
                             </li>{' '}
@@ -37,7 +41,11 @@ export default function LateralMenu() {
                                     <FontAwesomeIcon
                                         icon={faShoppingBag}
                                         size="lg"
-                                        className="text-gray-500 cursor-pointer cursor-pointer"
+                                        className={`${
+                                            window.location.pathname === '/cart'
+                                                ? 'text-gray-600'
+                                                : 'text-gray-500'
+                                        } cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out`}
                                     />
                                 </Link>
                             </li>
@@ -46,7 +54,12 @@ export default function LateralMenu() {
                                     <FontAwesomeIcon
                                         icon={faHeart}
                                         size="lg"
-                                        className="text-gray-500 cursor-pointer"
+                                        className={`${
+                                            window.location.pathname ===
+                                            '/likes'
+                                                ? 'text-gray-600'
+                                                : 'text-gray-500'
+                                        } cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out`}
                                     />
                                 </Link>
                             </li>

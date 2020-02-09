@@ -7,10 +7,12 @@ import LateralMenu from './LateralMenu';
 
 export default function Layout({ children }) {
     return (
-        <div className="layout-menu">
+        <div className="layout-menu lg:overflow-y-hidden overflow-scroll">
             <LateralMenu />
             <Header />
-            <div>{children}</div>
+            <div className="h-screen w-screen flex flex-col justify-start lg:px-8 px-2 py-5">
+                {children}
+            </div>
             <Footer />
         </div>
     );

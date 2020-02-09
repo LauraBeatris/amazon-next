@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import { Container } from './styles';
-
 export default function Button({
     className,
     type,
@@ -12,7 +10,7 @@ export default function Button({
 }) {
     return (
         <button
-            className={`bg-blue-500 hover:bg-blue-700 p-2 text-white font-medium ${className}`}
+            className={`bg-blue-500 hover:bg-blue-700 p-2 text-white font-medium ${className} opacity-75 hover:opacity-100 transition-opacity duration-500 ease-out`}
             type={type}
             {...rest}
             onClick={handleClick}

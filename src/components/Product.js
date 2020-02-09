@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
-import Tag from '~/components/Tag';
 import Button from '~/components/Button';
 
 export default function Product({ product }) {
@@ -19,7 +18,7 @@ export default function Product({ product }) {
                     size="lg"
                     className="w-5"
                     icon={faStar}
-                    color="yellow"
+                    color="#e69d3f"
                 />
             );
         }
@@ -34,25 +33,21 @@ export default function Product({ product }) {
     }
 
     return (
-        <div className="h-180 mr-4 flex flex-row rounded-lg max-w-400">
-            <div className="flex items-center mr-4">
+        <div className="h-180 flex flex-row lg:mr-8 mr-0 rounded-lg max-w-500">
+            <div className="flex items-center lg:mx-4 mx-0">
                 <img
                     src={newProductData.image}
                     alt={newProductData.name}
                     aria-label={newProductData.name}
-                    className="max-w-200 max-h-200"
+                    className="w-140 lg:mx-5 mx-0 max-h-200"
                 />
             </div>
 
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col justify-between lg:ml-0 ml-3">
                 <strong className="max-w-240 truncate text-xl text-gray-800">
                     {newProductData.name}
                 </strong>
-                <div className="flex flex-row mb-5">
-                    {newProductData.tags.map(tag => (
-                        <Tag name={tag} />
-                    ))}
-                </div>
+
                 <div className="flex flex-row">
                     <div>
                         <span className="font-bold text-gray-800">$800.00</span>

@@ -7,10 +7,7 @@
 .layout-menu {
     display: grid;
     grid-template-columns: 80px 1fr;
-
-
-
-
+    height: 100vh;
 }
 
 @media (max-width: 1000px) {
@@ -19,4 +16,11 @@
     }
 }
 
-
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #000000;
+    -webkit-font-smoothing: antialiased;
+}
