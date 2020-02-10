@@ -12,6 +12,7 @@ module.exports = {
             height: {
                 ...height,
                 '180': '180px',
+                '400': '400px',
             },
             width: {
                 ...width,
@@ -24,6 +25,7 @@ module.exports = {
                 '400': '400px',
                 '500': '500px',
                 screen: '100vw',
+                '700': '700px',
             },
             maxHeight: {
                 ...maxHeight,

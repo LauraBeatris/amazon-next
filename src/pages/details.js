@@ -46,7 +46,7 @@ export default function Details({ product, error }) {
                     </span>
                 ) : (
                     <div className="flex flex-col lg:grid grid-cols-2 h-full py-12 lg:py-0">
-                        <div className="h-full">
+                        <div className="h-full flex flex-col">
                             <Link href="/">
                                 <div className="cursor-pointer transition-shadows duration-300 hover:shadow shadow-lg mb-5 lg:mb-0  rounded-full text-gray-500 w-12 h-12 flex items-center justify-center p-8">
                                     <FontAwesomeIcon
@@ -60,7 +60,7 @@ export default function Details({ product, error }) {
                                 alt={product.name}
                                 aria-label={product.name}
                                 title={product.name}
-                                className="lg:my-12 mx-0"
+                                className="lg:my-12 mx-0 h-400 max-w-700 self-center"
                             />
                         </div>
                         <div className="h-full flex flex-col justify-between pr-8">

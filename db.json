@@ -14,14 +14,16 @@
         "price": 4696,
         "stars": 5,
         "type": ["videogames"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/61Na4U9J8%2BL._AC_.jpg"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61Na4U9J8%2BL._AC_.jpg",
+        "description": "The feel, shape, and sensitivity of the dual analog sticks and trigger buttons have been improved to provide a greater sense of control, no matter what you play <br /> The new multi touch and clickable touch pad on the face of the DualShock 4 Wireless Controller opens up worlds of new gameplay possibilities for both newcomers and veteran gamers <br /> The DualShock 4 Wireless Controller features a built in speaker and stereo headset jack, putting several new audio options in the player's hands <br /> The Dualshock 4 wireless controller can be easily recharged by plugging it into your PlayStation 4 system, even when in rest mode, or with any standard charger using a USB cable (type A to micro B sold separately)"
     },{
         "id": 3,
         "name": "Fjallraven - Kanken Classic Backpack for Everyday",
         "price": 7995,
         "stars": 5,
         "type": ["top-sellers", "accessories"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71gjJZ4Df2L._AC_UX679_.jpg"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71gjJZ4Df2L._AC_UX679_.jpg",
+        "description": "Vinylon F: 100% vinylal <br /> 100% Polyvinyl-alcohol lining <br /> Zipper closure <br /> 12' shoulder drop <br /> 15' high <br /> 11' wide <br /> ICONIC: Same classic Kanken design since 1978. Stash everyday essentials in the main zippered compartment, front zippered pocket, and two open side pockets."
     }, {
         "id": 4,
         "name": "LEGO DUPLO Big Construction Site",
@@ -34,47 +36,53 @@
         "name": "Disney Pixar Toy Story Blast-Off Buzz",
         "price": 1298,
         "stars": 5,
-        "type": ["toys"]
+        "type": ["toys"],
+        "description": "Disney Pixar Toy Story 4 Buzz Lightyear figure with lights and sounds. <br /> In movie-inspired relative scale for authentic flying and action play! <br /> Squeeze his legs and his chest lights up, his wings pop out and he assumes his iconic flying pose! <br /> Speaks 20+ phrases, has a unique talking facial expression and makes iconic blast off sounds. <br /> Perfect for movie storytelling play. For ages 3 and up."
     }, {
         "id": 6,
         "name": "$20 Nintendo eShop Gift Card [Digital Code]",
         "price": 2000,
         "stars": 5,
         "type": ["videogames"],
-        "image": "https://m.media-amazon.com/images/I/71YSvFcuK7L._AC_UY218_ML3_.jpg"
+        "image": "https://m.media-amazon.com/images/I/71YSvFcuK7L._AC_UY218_ML3_.jpg",
+        "description": "This item can be redeemed on eShop only. This item cannot be redeemed on the Wii Shop <br /> The perfect gift for anyone who loves to play—including you. Choose from over 1,000 new, classic and indie games – delivered directly to your Nintendo Switch, Wii U or Nintendo 3DS family of systems. <br /> Nintendo eShop Digital Cards are redeemable only through the Nintendo eShop on the Nintendo Switch, Wii U, and Nintendo 3DS family of systems. <br /> Digital Card balances can be shared across Nintendo Switch, Wii U and Nintendo 3DS family of systems, but may only be used on a single Nintendo eShop account."
     }, {
-        "id": 6,
+        "id": 7,
         "name": "Nintendo Switch Lite - Turquoise",
         "price": 19900,
         "stars": 5,
         "type": ["videogames"],
-        "image": "https://m.media-amazon.com/images/I/71qmF0FHj7L._AC_UY218_ML3_.jpg"
+        "image": "https://m.media-amazon.com/images/I/71qmF0FHj7L._AC_UY218_ML3_.jpg",
+        "description": "Handheld Nintendo Switch gaming <br /> Optimized for personal, handheld play; Nintendo Switch Lite is a small and light Nintendo Switch system <br /> Features a sleek, unibody design with fully integrated controls and a built in plus Control Pad <br /> Compatible with all physical and digital Nintendo Switch games that support Handheld mode <br />"
     },{
-        "id": 6,
+        "id": 8,
         "name": "Nintendo Entertainment System: NES Classic Edition",
         "price": 970,
         "stars": 5,
         "type": ["videogames"],
-        "image": "https://m.media-amazon.com/images/I/81s7B+Als-L._AC_UY218_ML3_.jpg"
+        "image": "https://m.media-amazon.com/images/I/81s7B+Als-L._AC_UY218_ML3_.jpg",
+        "description": "The Nintendo Entertainment System: NES Classic Edition has the original look and feel, only smaller, sleeker, and pre loaded with 30 games <br /> The pre installed games include: Super Mario Bros., Donkey Kong, The Legend of Zelda, PAC MAN, Dr. Mario, Mega Man, Final Fantasy, and dozens more <br /> Includes a standard HDMI cable <br /> Comes with one old school, grey colored NES Classic Controller and an AC adapter <br /> Also compatible with Classic Controller and Classic Controller Pro. Additional NES Classic Controllers will be sold separately <br />"
     },
     {
-        "id": 7,
+        "id": 9,
         "name": "Innovative Technology VSC-550BT-TQ Victrola Vintage",
         "price": 3996,
         "stars": 5,
         "type": ["top-sellers", "accessories"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/61FSnPYsXzL._AC_SY200_.jpg"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61FSnPYsXzL._AC_SY200_.jpg",
+        "description": "Three-speed turntable (33 1/3, 45, 78 RPM) plays all of your vinyl records and favorite albums. <br /> Built-in Bluetooth to wirelessly play music from your Bluetooth enabled device. No cords needed. <br /> Portable suitcase design with easy carry handle. <br /> 3.5mm Aux-in for playing music from any non-Bluetooth device, RCA output and headphone jack. <br /> Built-in stereo speakers.No battery used.Power,on,off,volume control knob.Auto or manual stop selection switch. <br />"
     },
     {
-        "id": 8,
+        "id": 10,
         "name": "Kasa Smart Light Switch by TP-Link",
         "price": 1999,
         "stars": 5,
         "type": ["top-sellers", "accessories"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/61GXFj097RL._AC_SY200_.jpg"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61GXFj097RL._AC_SY200_.jpg",
+        "description": "Control FROM Anywhere: Turn electronics on or off from Anywhere with Your Smartphone using the Kasa app (Compatible w/ Android & iOS) <br /> Voice Control: Works with Amazon Alexa, Google Assistant and MicroSoft Cortana Supported devices for a hands Free Experience <br /> GUIDED INSTALL: No need to understand complex switch wiring or Master vs auxiliary switch configurations; The Kasa app guides you through Easy step by step installation <br /> SCHEDULING: Use Schedules to set Your Smart Switch to automatically turn on and off while you're Home or away <br /> Note: Requires a neutral wire / works in a Single pole setup only / Requires a Secured 2.4 gigahertz Wi Fi network connection; Refer to the PDF attached below in Technical Specification for User Manual <br />"
     },
     {
-        "id": 9,
+        "id": 11,
         "name": "iPhone XR Apple Black",
         "price": 3139200,
         "stars": 5,
@@ -84,7 +92,7 @@
 
     },
     {
-        "id": 10,
+        "id": 12,
         "name": "Xiaomi Amazfit Bip A1608 Original Band",
         "price": 34399,
         "stars": 5,
@@ -94,7 +102,7 @@
         "description": "The Amazfit Bip smartwatch comes with 30-day long battery life on a single charge of 2.5-hours. <br /> Optical heart rate monitoring and built-in GPS to track daily step count, distance traveled, calories burned, and sleep quality. <br /> 4-sport modes - outdoor running, treadmill, cycling and walking with detailed insights into most frequent activities. <br /> Get notifications for emails, SMS messages, and incoming phone calls as well as alerts for Facebook, Twitter, weather forecasts, etc. <br /> This smartwatch comes in 4 colors and a bright always-on 1.28” display and is compatible with both Google Android and Apple iOS. <br />"
     },
     {
-        "id": 11,
+        "id": 13,
         "name": "Smartphone Xiaomi Redmi Note 8 64gb Moonlight (White)",
         "price": 106900,
         "stars": 5,
