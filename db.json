@@ -6,7 +6,8 @@
         "stars": 5,
         "type": ["computers", "technologies"],
         "tags": ["cheep"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71vvXGmdKWL._AC_SX679_.jpg"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71vvXGmdKWL._AC_SX679_.jpg",
+        "description": "AMD Ryzen 3 3200U Dual Core Processor (Up to 3.5GHz); 4GB DDR4 Memory; 128GB PCIe NVMe SSD <br /> 15.6 inches Full HD (1920 x 1080) Widescreen LED backlit IPS Display; AMD Radeon Vega 3 Mobile Graphics <br /> 1 USB 3.1 Gen 1 Port, 2 USB 2.0 Ports & 1 HDMI Port with HDCP support <br /> 802.11ac Wi-Fi; Backlit Keyboard; Up to 7.5 Hours Battery Life <br /> Windows 10 in S mode. Maximum Power Supply Wattage 65 W <br />"
     }, {
         "id": 2,
         "name": "DualShock 4 Wireless Controller for PlayStation 4 - Magma Red",
@@ -36,67 +37,69 @@
         "type": ["toys"]
     }, {
         "id": 6,
-        "name": "DualShock 4 Wireless Controller for PlayStation 4 - Magma Red",
-        "price": 4696,
+        "name": "$20 Nintendo eShop Gift Card [Digital Code]",
+        "price": 2000,
         "stars": 5,
         "type": ["videogames"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/61Na4U9J8%2BL._AC_.jpg"
+        "image": "https://m.media-amazon.com/images/I/71YSvFcuK7L._AC_UY218_ML3_.jpg"
     }, {
         "id": 6,
-        "name": "DualShock 4 Wireless Controller for PlayStation 4 - Magma Red",
-        "price": 4696,
+        "name": "Nintendo Switch Lite - Turquoise",
+        "price": 19900,
         "stars": 5,
         "type": ["videogames"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/61Na4U9J8%2BL._AC_.jpg"
+        "image": "https://m.media-amazon.com/images/I/71qmF0FHj7L._AC_UY218_ML3_.jpg"
     },{
         "id": 6,
-        "name": "DualShock 4 Wireless Controller for PlayStation 4 - Magma Red",
-        "price": 4696,
+        "name": "Nintendo Entertainment System: NES Classic Edition",
+        "price": 970,
         "stars": 5,
         "type": ["videogames"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/61Na4U9J8%2BL._AC_.jpg"
+        "image": "https://m.media-amazon.com/images/I/81s7B+Als-L._AC_UY218_ML3_.jpg"
     },
     {
         "id": 7,
-        "name": "Fjallraven - Kanken Classic Backpack for Everyday",
-        "price": 7995,
+        "name": "Innovative Technology VSC-550BT-TQ Victrola Vintage",
+        "price": 3996,
         "stars": 5,
         "type": ["top-sellers", "accessories"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71gjJZ4Df2L._AC_UX679_.jpg"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61FSnPYsXzL._AC_SY200_.jpg"
     },
     {
         "id": 8,
-        "name": "Fjallraven - Kanken Classic Backpack for Everyday",
-        "price": 7995,
+        "name": "Kasa Smart Light Switch by TP-Link",
+        "price": 1999,
         "stars": 5,
         "type": ["top-sellers", "accessories"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71gjJZ4Df2L._AC_UX679_.jpg"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61GXFj097RL._AC_SY200_.jpg"
     },
     {
         "id": 9,
-        "name": "Acer Aspire 5 Slim Laptop",
-        "price": 31392,
+        "name": "iPhone XR Apple Black",
+        "price": 3139200,
         "stars": 5,
         "type": ["computers", "technologies"],
-        "tags": ["cheep"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71vvXGmdKWL._AC_SX679_.jpg"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41piKUNcAVL._AC_SY200_.jpg",
+        "description": "Carrier - This phone is locked to simple Mobile from Tracfone, which means this device can only be used on the Simple Mobile wireless network. <br /> Plans - simple Mobile offers a variety of coverage plans, including 30-day unlimited Talk, text & data. No Activation Fees, No Credit Checks, and no Hassles On a Nationwide Lightning-fast Network. For more information or plan options, please visit the Simple Mobile website. <br /> Activation - You’ll receive a simple Mobile SIM kit with this iPhone. Follow the instructions to get service activated with the simple Mobile plan of your choice. 5-inch Super Retina XDR OLED display <br /> Water and dust resistant (4 meters for up to 30 minutes, IP68) <br /> Triple-camera system with 12MP Ultra wide, wide, and telephoto cameras; night mode, Portrait mode, and 4K video up to 60fps <br /> 12MP True Depth front Camera with Portrait mode, 4K video, and slo-mo"
+
     },
     {
         "id": 10,
-        "name": "Acer Aspire 5 Slim Laptop",
-        "price": 31392,
+        "name": "Xiaomi Amazfit Bip A1608 Original Band",
+        "price": 34399,
         "stars": 5,
         "type": ["computers", "technologies"],
         "tags": ["cheep"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71vvXGmdKWL._AC_SX679_.jpg"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51HfwLe-TQL._AC_SX679_.jpg",
+        "description": "The Amazfit Bip smartwatch comes with 30-day long battery life on a single charge of 2.5-hours. <br /> Optical heart rate monitoring and built-in GPS to track daily step count, distance traveled, calories burned, and sleep quality. <br /> 4-sport modes - outdoor running, treadmill, cycling and walking with detailed insights into most frequent activities. <br /> Get notifications for emails, SMS messages, and incoming phone calls as well as alerts for Facebook, Twitter, weather forecasts, etc. <br /> This smartwatch comes in 4 colors and a bright always-on 1.28” display and is compatible with both Google Android and Apple iOS. <br />"
     },
     {
         "id": 11,
-        "name": "Acer Aspire 5 Slim Laptop",
-        "price": 31392,
+        "name": "Smartphone Xiaomi Redmi Note 8 64gb Moonlight (White)",
+        "price": 106900,
         "stars": 5,
         "type": ["computers", "technologies"],
-        "tags": ["cheep"],
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71vvXGmdKWL._AC_SX679_.jpg"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51dd-GC9iaL._AC_SY200_.jpg",
+        "description": "HSDPA 850 / 900 / 2100 - LTE B1 (2100) B2 (1900 PCS) B3 (1800 +) B4 (1700/2100 AWS 1) B5 (850) B7 (2600) B8 (900) B20 (800 DD) B28 (700 APT) B38 (TD 2600) B40 (TD 2300) Dual SIM (Nano-SIM, dual stand-by)> (ensure to check compatibility with your carrier before purchase) <br /> 6.3 inches 1080 x 2340 pixels, 19.5:9 ratio (~409 ppi density) - Fingerprint (rear-mounted) <br /> 64GB + 4GB RAM - microSD, up to 256 GB - Qualcomm SDM665 Snapdragon Octa-core - Non-removable Li-Po 4000 mAh battery <br /> Rear (Main) Camera: Quad 48MP(wide) + 8MP(ultrawide) + 2MP(dedicated macro camera) + 2MP - Front Camera: 13 MP, f/2.0 - Video: 2160p@30fps, 1080p@30/60/120fps, 720p@960fps <br /> Unlocked cellphones are compatible with most of the GSM carriers ( Like T-Mobile or AT&T ) but please be aware that are not compatible with CDMA carriers ( Like Sprint or Verizon Wireless for example ) - FCC ID: 2AFZZC3JG"
     }]
 }

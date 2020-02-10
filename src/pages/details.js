@@ -48,7 +48,7 @@ export default function Details({ product, error }) {
                     <div className="flex flex-col lg:grid grid-cols-2 h-full py-12 lg:py-0">
                         <div className="h-full">
                             <Link href="/">
-                                <div className="cursor-pointer mb-5 lg:mb-0 shadow rounded-full text-gray-500 w-12 h-12 flex items-center justify-center p-8">
+                                <div className="cursor-pointer transition-shadows duration-300 hover:shadow shadow-lg mb-5 lg:mb-0  rounded-full text-gray-500 w-12 h-12 flex items-center justify-center p-8">
                                     <FontAwesomeIcon
                                         icon={faArrowLeft}
                                         size="lg"
@@ -63,7 +63,7 @@ export default function Details({ product, error }) {
                                 className="lg:my-12 mx-0"
                             />
                         </div>
-                        <div className="h-full flex flex-col justify-between">
+                        <div className="h-full flex flex-col justify-between pr-8">
                             <header>
                                 <h1 className="text-2xl mb-2 text-gray-800 font-bold">
                                     {product.name}
@@ -74,9 +74,12 @@ export default function Details({ product, error }) {
                                         1540 reviews
                                     </span>
                                 </div>
-                                <p className="text-md text-gray-500 mt-8">
-                                    This is a huge description
-                                </p>
+                                <p
+                                    className="text-md text-gray-500 mt-8"
+                                    dangerouslySetInnerHTML={{
+                                        __html: product.description,
+                                    }}
+                                />
                             </header>
                             <footer className="flex flex-col lg:flex-row w-full justify-between lg:px-8 px-0 py-5">
                                 <div className="flex flex-col">
@@ -104,7 +107,7 @@ export default function Details({ product, error }) {
                                         <FontAwesomeIcon
                                             size="lg"
                                             icon={faHeart}
-                                            className="text-blue-500"
+                                            className="text-blue-500 hover:text-blue-600 transition-colors duration-500"
                                         />
                                     </button>
                                 </div>
@@ -122,7 +125,6 @@ Details.getInitialProps = async ({ query }) => {
 
     try {
         const response = await api.get(`/products/${productId}`);
-        console.log(response);
         return { product: response.data };
     } catch (err) {
         return { error: { message: 'Product not found', data: err } };

@@ -19,14 +19,13 @@ function SampleNextArrow(props) {
             onClick={onClick}
             aria-label={to}
         >
-            <FontAwesomeIcon icon={faArrowRight} color="#000000" size="md" />
+            <FontAwesomeIcon icon={faArrowRight} color="#000000" size="sm" />
         </button>
     );
 }
 
 function SamplePrevArrow(props) {
     const { className, style, onClick, to } = props;
-    console.log(onClick);
     return (
         <button
             className={`${className} button button--text button--icon cursor-pointer`}
@@ -40,7 +39,7 @@ function SamplePrevArrow(props) {
             onClick={onClick}
             aria-label={to}
         >
-            <FontAwesomeIcon icon={faArrowRight} color="#000000" size="md" />
+            <FontAwesomeIcon icon={faArrowRight} color="#000000" size="sm" />
         </button>
     );
 }
@@ -84,7 +83,7 @@ export default function SliderComponent({ productList, type }) {
     return (
         <Slider {...settings}>
             {productList[type].map(product => (
-                <Product product={product} />
+                <Product product={product} key={product.id} />
             ))}
         </Slider>
     );

@@ -28,11 +28,7 @@ export default function LateralMenu() {
                                     <FontAwesomeIcon
                                         icon={faClipboardList}
                                         size="lg"
-                                        className={`${
-                                            window.location.pathname === '/'
-                                                ? 'text-gray-600'
-                                                : 'text-gray-500'
-                                        } cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out`}
+                                        className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
                                     />
                                 </Link>
                             </li>{' '}
@@ -41,11 +37,7 @@ export default function LateralMenu() {
                                     <FontAwesomeIcon
                                         icon={faShoppingBag}
                                         size="lg"
-                                        className={`${
-                                            window.location.pathname === '/cart'
-                                                ? 'text-gray-600'
-                                                : 'text-gray-500'
-                                        } cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out`}
+                                        className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
                                     />
                                 </Link>
                             </li>
@@ -54,12 +46,7 @@ export default function LateralMenu() {
                                     <FontAwesomeIcon
                                         icon={faHeart}
                                         size="lg"
-                                        className={`${
-                                            window.location.pathname ===
-                                            '/likes'
-                                                ? 'text-gray-600'
-                                                : 'text-gray-500'
-                                        } cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out`}
+                                        className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
                                     />
                                 </Link>
                             </li>

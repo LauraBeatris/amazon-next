@@ -14,7 +14,7 @@ function Home({ productList, error }) {
     return (
         <Layout>
             {!showErrorMessage && Object.keys(productList).length > 0 ? (
-                <div className="w-full">
+                <div className="w-full py-16">
                     <div className="mb-8 w-full">
                         <h2 className="text-2xl mb-2 lg:px-8 px-0 text-gray-800 font-bold">
                             {' '}
@@ -61,7 +61,7 @@ function Home({ productList, error }) {
     );
 }
 
-Home.getInitialProps = async () => {
+Home.getInitialProps = async ({ req }) => {
     try {
         const response = await api.get('/products');
         const products = response.data;
@@ -98,4 +98,4 @@ Home.propTypes = {
     error: PropTypes.shape(),
 };
 
-export default withAnalytics()(Home);
+export default Home;
