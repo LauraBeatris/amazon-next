@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Header() {
     return (
-        <header className="lg:hidden bg-white fixed top-0 right-0 w-full shadow-lg p-4 flex justify-between items-center">
+        <header className="z-50 lg:hidden bg-white w-full shadow-lg p-4 flex justify-between items-center">
             <img
                 src="/static/amazon.png"
                 alt="Amazon"

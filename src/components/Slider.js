@@ -1,48 +1,63 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Product from '~/components/Product';
 
-function SampleNextArrow(props) {
-    const { className, style, onClick, to } = props;
+function SampleNextArrow({ className, style, onClick }) {
     return (
         <button
-            className={`${className} button button--text button--icon cursor-pointer`}
+            className={`${className} lg:right-5 button button--text button--icon cursor-pointer`}
             style={{
                 ...style,
-                display: 'block',
-                right: '5px',
-                position: 'absolute',
-                zIndex: 1000,
             }}
+            type="button"
             onClick={onClick}
-            aria-label={to}
         >
             <FontAwesomeIcon icon={faArrowRight} color="#000000" size="sm" />
         </button>
     );
 }
 
-function SamplePrevArrow(props) {
-    const { className, style, onClick, to } = props;
+SampleNextArrow.defaultProps = {
+    className: null,
+    style: null,
+    onClick: null,
+};
+
+SampleNextArrow.propTypes = {
+    className: PropTypes.string,
+    style: PropTypes.shape(),
+    onClick: PropTypes.func,
+};
+
+function SamplePrevArrow({ className, style, onClick }) {
     return (
         <button
-            className={`${className} button button--text button--icon cursor-pointer`}
+            type="button"
+            className={`${className} right-5 lg:right-0 button button--text button--icon cursor-pointer`}
             style={{
                 ...style,
-                display: 'block',
-                left: '5px',
-                position: 'absolute',
-                zIndex: 1000,
             }}
             onClick={onClick}
-            aria-label={to}
         >
             <FontAwesomeIcon icon={faArrowRight} color="#000000" size="sm" />
         </button>
     );
 }
+
+SamplePrevArrow.defaultProps = {
+    className: null,
+    style: null,
+    onClick: null,
+};
+
+SamplePrevArrow.propTypes = {
+    className: PropTypes.string,
+    style: PropTypes.shape(),
+    onClick: PropTypes.func,
+};
 
 export default function SliderComponent({ productList, type }) {
     const settings = {

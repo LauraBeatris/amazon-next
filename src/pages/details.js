@@ -60,7 +60,7 @@ export default function Details({ product, error }) {
                                 alt={product.name}
                                 aria-label={product.name}
                                 title={product.name}
-                                className="lg:my-12 mx-0 h-400 max-w-700 self-center"
+                                className="lg:my-12 mx-0 h-300 max-w-480 self-center"
                             />
                         </div>
                         <div className="h-full flex flex-col justify-between pr-8">
@@ -81,7 +81,7 @@ export default function Details({ product, error }) {
                                     }}
                                 />
                             </header>
-                            <footer className="flex flex-col lg:flex-row w-full justify-between lg:px-8 px-0 py-5">
+                            <footer className="flex flex-col lg:flex-row w-full justify-between  pt-5 pb-8">
                                 <div className="flex flex-col">
                                     <span className="text-gray-500">
                                         Best price

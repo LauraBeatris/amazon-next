@@ -34,16 +34,16 @@ export default function Product({ product }) {
 
     return (
         <div className="h-180 flex flex-row lg:mr-8 mr-0 rounded-lg max-w-500">
-            <div className="flex items-center lg:mx-4 mx-0">
+            <div className="flex items-center">
                 <img
                     src={newProductData.image}
                     alt={newProductData.name}
                     aria-label={newProductData.name}
-                    className="w-140 lg:mx-5 mx-0 max-h-200"
+                    className="w-140 max-h-200"
                 />
             </div>
 
-            <div className="flex flex-col justify-between lg:ml-0 ml-3">
+            <div className="flex flex-col justify-between ml-3">
                 <strong className="max-w-240 truncate text-xl text-gray-800">
                     {newProductData.name}
                 </strong>
