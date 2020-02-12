@@ -3,10 +3,10 @@ import React from 'react';
 import CheckoutLayout from '~/layout/Checkout';
 import ApplicationLayout from '~/layout';
 
-export default function CheckoutSecondStep() {
+export default function CheckoutThirdStep() {
     return (
         <ApplicationLayout>
-            <CheckoutLayout step={{ order: 2, title: 'Shipping Info' }} />
+            <CheckoutLayout step={{ order: 3, title: 'Payment' }} />
         </ApplicationLayout>
     );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
@@ -7,6 +8,12 @@ import Cart from '~/components/Cart';
 import Button from '~/components/Button';
 
 export default function CartPage() {
+    const router = useRouter();
+
+    function handleSubmit() {
+        return router.push({ pathname: '/checkout/step1' });
+    }
+
     return (
         <Layout style={{ padding: 0 }}>
             <div className="w-full flex flex-col h-full lg:flex-row">
@@ -98,7 +105,13 @@ export default function CartPage() {
                             </div>
                         </Link>
 
-                        <Button className="py-5 px-8">Goto checkout</Button>
+                        <Button
+                            className="py-5 px-8"
+                            handleClick={handleSubmit}
+                            title="Goto checkout"
+                        >
+                            Goto checkout
+                        </Button>
                     </div>
                 </div>
                 <div className="lg:w-1/3 lg:flex flex-col hidden h-full">
