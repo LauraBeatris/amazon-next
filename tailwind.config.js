@@ -5,11 +5,16 @@ const {
     maxHeight,
     colors,
     inset,
+    fontSize,
 } = require('tailwindcss/defaultTheme');
 
 module.exports = {
     theme: {
         extend: {
+            fontSize: {
+                ...fontSize,
+                '2xs': '.60rem',
+            },
             inset: {
                 ...inset,
                 5: '5px',
@@ -20,6 +25,7 @@ module.exports = {
                 '200': '200px',
                 '300': '300px',
                 '400': '400px',
+                '65': '65px',
             },
             width: {
                 ...width,
@@ -47,6 +53,10 @@ module.exports = {
                     ...colors.yellow,
                     burn: '#e69d3f',
                 },
+            },
+            transitionProperty: {
+                font: 'font-size',
+                height: 'height',
             },
         },
     },
