@@ -2,7 +2,7 @@ import Reactotron from 'reactotron-react-js';
 import { reactotronRedux } from 'reactotron-redux';
 import sagaPlugin from 'reactotron-redux-saga';
 
-if (__DEV__) {
+if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
     const tron = Reactotron.configure()
         .use(reactotronRedux())
         .use(sagaPlugin())

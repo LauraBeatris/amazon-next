@@ -1,6 +1,14 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+
+import '~/config/ReactotronConfig';
+
 import App from 'next/app';
 import Head from 'next/head';
+
+import { store, persistor } from '~/store';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '~/styles/style.css';
@@ -29,7 +37,11 @@ class MyApp extends App {
                 <Head>
                     <title> Amazon Next </title>
                 </Head>
-                <Component {...pageProps} />
+                <Provider store={store}>
+                    <PersistGate persistor={persistor}>
+                        <Component {...pageProps} />
+                    </PersistGate>
+                </Provider>
             </>
         );
     }
