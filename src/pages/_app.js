@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import '~/config/ReactotronConfig';
+// import '~/config/ReactotronConfig';
 
 import App from 'next/app';
 import Head from 'next/head';

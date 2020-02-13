@@ -7,9 +7,12 @@ export function addToCartRequest(product) {
     };
 }
 
-export function addToCartSuccess() {
+export function addToCartSuccess(product) {
     return {
         type: '@cart/ADD_PRODUCT_SUCCESS',
+        payload: {
+            product,
+        },
     };
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -8,6 +9,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export default function LateralMenu() {
+    const productsAmount = useSelector(state => state.cart.products.length);
+    const likesAmount = useSelector(state => state.user.likedProducts.length);
     return (
         <div className="hidden py-8 lg:flex flex-col justify-between items-center h-full shadow-lg">
             <Link href="/">
@@ -32,7 +35,7 @@ export default function LateralMenu() {
                                     />
                                 </Link>
                             </li>{' '}
-                            <li className="mb-8">
+                            <li className="mb-8 relative">
                                 <Link href="/cart">
                                     <FontAwesomeIcon
                                         icon={faShoppingBag}
@@ -40,8 +43,11 @@ export default function LateralMenu() {
                                         className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
                                     />
                                 </Link>
+                                <div className="bg-yellow-burn flex items-center text-white font-bold w-4 h-4 rounded-full p-1 absolute top-0 left-60p text-2xs">
+                                    {productsAmount}
+                                </div>
                             </li>
-                            <li className="mt-8">
+                            <li className="mt-8 relative">
                                 <Link href="/likes">
                                     <FontAwesomeIcon
                                         icon={faHeart}
@@ -49,6 +55,9 @@ export default function LateralMenu() {
                                         className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
                                     />
                                 </Link>
+                                <div className="bg-yellow-burn flex items-center text-white font-bold w-4 h-4 rounded-full p-1 absolute top-0 left-60p text-2xs">
+                                    {likesAmount}
+                                </div>
                             </li>
                         </ul>
                     </nav>

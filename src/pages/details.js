@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faExclamationTriangle,
@@ -6,14 +7,20 @@ import {
     faStar,
     faHeart,
 } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import PropTypes from 'prop-types';
 
 import Link from 'next/link';
+
 import Layout from '~/layout';
 import api from '~/services/api';
 import Button from '~/components/Button';
 
+import { addToCartRequest } from '~/store/modules/cart/actions';
+import { likeProductRequest } from '~/store/modules/user/actions';
+
 export default function Details({ product, error }) {
+    const dispatch = useDispatch();
     const stars = useMemo(() => {
         const initial = [];
         for (let i = 1; i < product.stars; i++) {
@@ -29,6 +36,19 @@ export default function Details({ product, error }) {
         }
         return initial;
     }, [product.stars]);
+
+    const liked = useSelector(state =>
+        state.user.likedProducts.find(liked => liked.id === product.id)
+    );
+
+    function addToCart() {
+        dispatch(addToCartRequest(product));
+    }
+
+    function handleLike() {
+        dispatch(likeProductRequest(product));
+    }
+
     return (
         <Layout>
             <div
@@ -95,20 +115,30 @@ export default function Details({ product, error }) {
                                     <Button
                                         className="font-bold text-xl px-12"
                                         title="Add to cart"
+                                        handleClick={addToCart}
                                     >
                                         {' '}
                                         Add to cart
                                     </Button>
                                     <button
-                                        className="ml-5 border-none bg-none"
+                                        className="ml-5 border-none bg-none outline-none"
                                         type="button"
                                         title="Save to my list"
+                                        onClick={handleLike}
                                     >
-                                        <FontAwesomeIcon
-                                            size="lg"
-                                            icon={faHeart}
-                                            className="text-blue-500 hover:text-blue-600 transition-colors duration-500"
-                                        />
+                                        {liked ? (
+                                            <FontAwesomeIcon
+                                                size="lg"
+                                                icon={faHeart}
+                                                className="text-blue-500 hover:text-blue-600 transition-colors duration-500"
+                                            />
+                                        ) : (
+                                            <FontAwesomeIcon
+                                                size="lg"
+                                                icon={faHeartRegular}
+                                                className="text-blue-500 hover:text-blue-600 transition-colors duration-500"
+                                            />
+                                        )}
                                     </button>
                                 </div>
                             </footer>

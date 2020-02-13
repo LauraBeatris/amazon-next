@@ -18,6 +18,7 @@ module.exports = {
             inset: {
                 ...inset,
                 5: '5px',
+                '60p': '60%',
             },
             height: {
                 ...height,
