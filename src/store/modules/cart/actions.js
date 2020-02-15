@@ -21,3 +21,27 @@ export function addToCartFailure() {
         type: '@cart/ADD_PRODUCT_FAILURE',
     };
 }
+
+export function removeFromCartRequest(id) {
+    return {
+        type: '@cart/REMOVE_PRODUCT_REQUEST',
+        payload: {
+            id,
+        },
+    };
+}
+
+export function removeFromCartSuccess(id) {
+    return {
+        type: '@cart/REMOVE_PRODUCT_SUCCESS',
+        payload: {
+            id,
+        },
+    };
+}
+
+export function removeFromCartFailure() {
+    return {
+        type: '@cart/REMOVE_PRODUCT_FAILURE',
+    };
+}

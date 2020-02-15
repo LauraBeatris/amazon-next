@@ -4,6 +4,10 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
+* {
+    outline: none !important;
+}
+
 .layout-menu {
     display: grid;
     grid-template-columns: 80px 1fr;

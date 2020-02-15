@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Form } from '@rocketseat/unform';
 
 import costumerSchema from '~/validators/costumer';
@@ -8,14 +9,16 @@ import ApplicationLayout from '~/layout';
 import FormGroup from '~/components/FormGroup';
 import Button from '~/components/Button';
 import Progress from '~/components/Progress';
+import { submitStepRequest } from '~/store/modules/checkout/actions';
 
 export default function CheckoutFirstStep() {
-    function handleSubmit(data, { resetForm }) {
-        console.log(data);
-        resetForm();
-    }
-
+    const dispatch = useDispatch();
     const stepInfo = { order: 1, title: 'Costumer Info' };
+
+    function handleSubmit(data) {
+        console.log('dispatched');
+        return dispatch(submitStepRequest({ costumer: data }, 'step2'));
+    }
 
     return (
         <ApplicationLayout className="lg:pr-0 lg:py-0">

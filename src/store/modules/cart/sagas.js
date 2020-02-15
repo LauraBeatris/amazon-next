@@ -1,5 +1,10 @@
 import { all, takeLatest, put, select } from 'redux-saga/effects';
-import { addToCartSuccess, addToCartFailure } from './actions';
+import {
+    addToCartSuccess,
+    addToCartFailure,
+    removeFromCartSuccess,
+    removeFromCartFailure,
+} from './actions';
 
 export function* cart({ payload }) {
     const { product } = payload;
@@ -15,4 +20,18 @@ export function* cart({ payload }) {
     return yield put(addToCartFailure());
 }
 
-export default all([takeLatest('@cart/ADD_PRODUCT_REQUEST', cart)]);
+export function* remove({ payload }) {
+    const { id } = payload;
+
+    const isSelected = yield select(state =>
+        state.cart.products.find(product => product.id === id)
+    );
+
+    if (isSelected) return yield put(removeFromCartSuccess(id));
+    return yield put(removeFromCartFailure());
+}
+
+export default all([
+    takeLatest('@cart/ADD_PRODUCT_REQUEST', cart),
+    takeLatest('@cart/REMOVE_PRODUCT_REQUEST', remove),
+]);

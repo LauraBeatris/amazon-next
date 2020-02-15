@@ -1,8 +1,7 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-
-// import '~/config/ReactotronConfig';
 
 import App from 'next/app';
 import Head from 'next/head';
@@ -23,6 +22,7 @@ import '~/styles/style.css';
   Warning => Adding a getInitialProps here will disable
   Automatic Static Optimization
 */
+dynamic(() => import('~/config/ReactotronConfig'), { ssr: false });
 
 class MyApp extends App {
     componentDidCatch(error) {

@@ -16,11 +16,20 @@ import Layout from '~/layout';
 import api from '~/services/api';
 import Button from '~/components/Button';
 
-import { addToCartRequest } from '~/store/modules/cart/actions';
+import {
+    addToCartRequest,
+    removeFromCartRequest,
+} from '~/store/modules/cart/actions';
 import { likeProductRequest } from '~/store/modules/user/actions';
 
 export default function Details({ product, error }) {
     const dispatch = useDispatch();
+    const isSelected = useSelector(state =>
+        state.cart.products.find(
+            selectedProduct => selectedProduct.id === product.id
+        )
+    );
+
     const stars = useMemo(() => {
         const initial = [];
         for (let i = 1; i < product.stars; i++) {
@@ -41,8 +50,9 @@ export default function Details({ product, error }) {
         state.user.likedProducts.find(liked => liked.id === product.id)
     );
 
-    function addToCart() {
-        dispatch(addToCartRequest(product));
+    function handleCart() {
+        if (isSelected) return dispatch(removeFromCartRequest(product.id));
+        return dispatch(addToCartRequest(product));
     }
 
     function handleLike() {
@@ -115,10 +125,12 @@ export default function Details({ product, error }) {
                                     <Button
                                         className="font-bold text-xl px-12"
                                         title="Add to cart"
-                                        handleClick={addToCart}
+                                        handleClick={handleCart}
                                     >
                                         {' '}
-                                        Add to cart
+                                        {isSelected
+                                            ? 'Remove from cart'
+                                            : 'Add to cart'}
                                     </Button>
                                     <button
                                         className="ml-5 border-none bg-none outline-none"
