@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +10,7 @@ import Button from '~/components/Button';
 
 export default function CartPage() {
     const router = useRouter();
+    const { products } = useSelector(state => state.cart);
 
     function handleSubmit() {
         return router.push({ pathname: '/checkout/step1' });
@@ -115,7 +117,7 @@ export default function CartPage() {
                     </div>
                 </div>
                 <div className="lg:w-1/3 lg:flex flex-col hidden h-full">
-                    <Cart />
+                    <Cart products={products} />
                 </div>
             </div>
         </Layout>

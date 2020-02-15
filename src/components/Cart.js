@@ -1,6 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
 
-export default function Cart() {
+export default function Cart({ products }) {
     return (
         <div className="h-full bg-gray-200 flex flex-col justify-between">
             <div className="py-8 px-5">
@@ -8,6 +10,28 @@ export default function Cart() {
                     You're Buying
                 </h1>
             </div>
+            {products.length > 0 ? (
+                <ul className="flex flex-col w-full px-5 pb-8">
+                    {products.map(product => (
+                        <Link href={`/details?productId=${product.id}`}>
+                            <li className="flex flex-row items-center cursor-pointer">
+                                <img
+                                    className="w-80 p-2 rounded"
+                                    src={product.image}
+                                    alt={product.name}
+                                    aria-label={product.name}
+                                    title={product.name}
+                                />
+                                <strong className="mb-3 transition-colors duration-300 text-gray-700 hover:text-gray-800">
+                                    {product.name}
+                                </strong>
+                            </li>
+                        </Link>
+                    ))}
+                </ul>
+            ) : (
+                <strong className="text-gray-700">Empty cart</strong>
+            )}
             <div className="flex flex-col bg-gray-300 p-5">
                 <ul className="w-full">
                     <li className="flex flex-row justify-between text-gray-600 mb-2">
@@ -29,3 +53,7 @@ export default function Cart() {
         </div>
     );
 }
+
+Cart.propTypes = {
+    products: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+};

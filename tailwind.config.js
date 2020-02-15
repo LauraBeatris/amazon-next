@@ -22,6 +22,7 @@ module.exports = {
             },
             height: {
                 ...height,
+                '80': '80px',
                 '180': '180px',
                 '200': '200px',
                 '300': '300px',
@@ -30,6 +31,7 @@ module.exports = {
             },
             width: {
                 ...width,
+                '80': '80px',
                 '140': '140px',
                 '166': '160px',
                 '300': '300px',
