@@ -31,6 +31,8 @@ module.exports = {
             width: {
                 ...width,
                 '140': '140px',
+                '166': '160px',
+                '300': '300px',
                 layout: 'calc(100vw - 80px)',
             },
             maxWidth: {

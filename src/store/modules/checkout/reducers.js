@@ -7,6 +7,17 @@ export const INITIAL_STATE = {
         birth: '',
         email: '',
     },
+    address: {
+        street: '',
+        state: '',
+        district: '',
+        zipcode: '',
+    },
+    payment: {
+        card: '',
+        method: '',
+        number: '',
+    },
 };
 
 export default function checkout(state = INITIAL_STATE, action) {
@@ -14,9 +25,7 @@ export default function checkout(state = INITIAL_STATE, action) {
         switch (action.type) {
             case '@checkout/SUBMIT_STEP_SUCCESS': {
                 const { payload } = action;
-
                 draft = { ...draft, ...payload.data };
-                console.log(draft);
                 return draft;
             }
             default:

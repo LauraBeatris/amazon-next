@@ -123,7 +123,7 @@ export default function Details({ product, error }) {
 
                                 <div className="flex flex-row items-center mt-5 lg:mt-0">
                                     <Button
-                                        className="font-bold text-xl px-12"
+                                        className="font-bold text-xl px-12 flex items-center justify-center lg:w-300 box-border"
                                         title="Add to cart"
                                         handleClick={handleCart}
                                     >

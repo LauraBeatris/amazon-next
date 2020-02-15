@@ -1,18 +1,13 @@
 import { all, put, takeLatest } from 'redux-saga/effects';
 import Router from 'next/router';
-import {
-    submitStepRequest,
-    submitStepFailure,
-    submitStepSuccess,
-} from './actions';
+import { submitStepFailure, submitStepSuccess } from './actions';
 
 export function* submitStep({ payload }) {
     try {
         const { data, nextStep } = payload;
-        console.log(data, nextStep);
-        return yield put(submitStepSuccess(data, nextStep));
+        yield put(submitStepSuccess(data, nextStep));
+        return Router.push(`/checkout/${nextStep}`);
     } catch (err) {
-        console.log(err);
         return yield put(submitStepFailure());
     }
 }

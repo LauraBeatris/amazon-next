@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Form } from '@rocketseat/unform';
 
 import costumerSchema from '~/validators/costumer';
@@ -13,10 +13,11 @@ import { submitStepRequest } from '~/store/modules/checkout/actions';
 
 export default function CheckoutFirstStep() {
     const dispatch = useDispatch();
+    const initialData = useSelector(state => state.checkout.costumer);
+
     const stepInfo = { order: 1, title: 'Costumer Info' };
 
     function handleSubmit(data) {
-        console.log('dispatched');
         return dispatch(submitStepRequest({ costumer: data }, 'step2'));
     }
 
@@ -28,9 +29,9 @@ export default function CheckoutFirstStep() {
                     order={stepInfo.order}
                 />
 
-                {/* TODO -> initialValues from Redux Store */}
                 <Form
                     onSubmit={handleSubmit}
+                    initialData={initialData}
                     schema={costumerSchema}
                     className="flex flex-col justify-center"
                 >
