@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useField } from '@rocketseat/unform';
 
-export default function FormGroup({ name, label, ...rest }) {
+export default function FormGroup({ name, label, submitted, ...rest }) {
     const ref = useRef(null); // For ref comparation purposes
     const { fieldName, defaultValue, registerField, error } = useField(name);
 
@@ -19,15 +19,16 @@ export default function FormGroup({ name, label, ...rest }) {
     }, [fieldName, ref.current]); // eslint-disable-line
 
     const inputClassName = useMemo(() => {
+        console.log('submitted', submitted);
         let defaultBorder = 'border-b-2 border-gray-400';
         if (error) {
             defaultBorder = 'border-b-2 border-red-500';
-        } else if (fieldValue) {
+        } else if (fieldValue && submitted) {
             defaultBorder = 'border-b-2 border-green-300';
         }
 
         return `transition-colors pb-1 font-light text-gray-700 w-full duration-300 bg-white ${defaultBorder} outline-none`;
-    }, [error, fieldValue]);
+    }, [error, fieldValue, submitted]);
 
     return (
         <div className="bg-white rounded py-2 text-gray-800 flex flex-col relative">
@@ -61,9 +62,11 @@ export default function FormGroup({ name, label, ...rest }) {
 
 FormGroup.defaultProps = {
     label: null,
+    submitted: false,
 };
 
 FormGroup.propTypes = {
     label: PropTypes.string,
     name: PropTypes.string.isRequired,
+    submitted: PropTypes.bool,
 };

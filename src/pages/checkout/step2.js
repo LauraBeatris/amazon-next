@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Scope } from '@rocketseat/unform';
@@ -17,9 +17,12 @@ import { submitStepRequest } from '~/store/modules/checkout/actions';
 export default function CheckoutSecondStep() {
     const dispatch = useDispatch();
     const initialData = useSelector(state => state.checkout);
+    const [formSubmit, setSubmitForm] = useState(false);
+
     const stepInfo = { order: 2, title: 'Shipping Info' };
 
     function handleSubmit(data) {
+        setSubmitForm(true);
         return dispatch(submitStepRequest({ ...data }, 'step3'));
     }
 
@@ -39,10 +42,26 @@ export default function CheckoutSecondStep() {
                 >
                     <div className="flex flex-col bg-white py-2 pr-2 mt-5 relative">
                         <Scope path="address">
-                            <FormGroup name="street" label="Street" />
-                            <FormGroup name="zipcode" label="Zipcode" />
-                            <FormGroup name="district" label="District" />
-                            <FormGroup name="state" label="State" />
+                            <FormGroup
+                                name="street"
+                                label="Street"
+                                submitted={formSubmit}
+                            />
+                            <FormGroup
+                                name="zipcode"
+                                label="Zipcode"
+                                submitted={formSubmit}
+                            />
+                            <FormGroup
+                                name="district"
+                                label="District"
+                                submitted={formSubmit}
+                            />
+                            <FormGroup
+                                name="state"
+                                label="State"
+                                submitted={formSubmit}
+                            />
                         </Scope>
 
                         <Button

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Scope } from '@rocketseat/unform';
@@ -17,10 +17,12 @@ import { submitStepRequest } from '~/store/modules/checkout/actions';
 export default function CheckoutSecondStep() {
     const dispatch = useDispatch();
     const initialData = useSelector(state => state.checkout);
-    console.log(initialData);
+    const [formSubmit, setSubmitForm] = useState(false);
+
     const stepInfo = { order: 3, title: 'Payment' };
 
     function handleSubmit(data) {
+        setSubmitForm(true);
         return dispatch(submitStepRequest({ ...data }, 'success'));
     }
 
@@ -41,9 +43,21 @@ export default function CheckoutSecondStep() {
                 >
                     <div className="flex flex-col bg-white py-2 pr-2 mt-5 relative">
                         <Scope path="payment">
-                            <FormGroup name="card" label="Card" />
-                            <FormGroup name="method" label="Method" />
-                            <FormGroup name="number" label="Number" />
+                            <FormGroup
+                                name="card"
+                                label="Card"
+                                submitted={formSubmit}
+                            />
+                            <FormGroup
+                                name="method"
+                                label="Method"
+                                submitted={formSubmit}
+                            />
+                            <FormGroup
+                                name="number"
+                                label="Number"
+                                submitted={formSubmit}
+                            />
                         </Scope>
 
                         <Button
