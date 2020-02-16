@@ -23,6 +23,7 @@
     "@zeit/next-css": "^1.0.1",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
+    "firebase": "^7.8.2",
     "immer": "^5.3.6",
     "json-server": "^0.15.1",
     "next": "9.2.1",

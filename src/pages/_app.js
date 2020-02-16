@@ -12,6 +12,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '~/styles/style.css';
 
+import '~/lib/firebase';
+
 /* Component Prop -> The active page
   pageProps -> An object with the initial props that were
   preloaded for your page.
