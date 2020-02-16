@@ -9,6 +9,7 @@ import Button from '~/components/Button';
 export default function Product({ product }) {
     const router = useRouter();
     const newProductData = { tags: [], ...product };
+
     const stars = useMemo(() => {
         const initial = [];
         for (let i = 1; i < product.stars; i++) {
@@ -50,7 +51,9 @@ export default function Product({ product }) {
 
                 <div className="flex flex-row">
                     <div>
-                        <span className="font-bold text-gray-800">$800.00</span>
+                        <span className="font-bold text-gray-800">
+                            ${product.price / 100}
+                        </span>
                     </div>
                 </div>
                 <div className="flex flex-row">{stars}</div>

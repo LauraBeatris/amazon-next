@@ -8,6 +8,18 @@
     outline: none !important;
 }
 
+@-webkit-keyframes autofill {
+    0%,100% {
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-delay: 1s; /* Safari support - any positive time runs instantly */
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
 .layout-menu {
     display: grid;
     grid-template-columns: 80px 1fr;

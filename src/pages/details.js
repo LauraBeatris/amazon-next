@@ -117,7 +117,7 @@ export default function Details({ product, error }) {
                                         Best price
                                     </span>
                                     <strong className="text-3xl text-gray-800">
-                                        $4564
+                                        ${product.price / 100}
                                     </strong>
                                 </div>
 

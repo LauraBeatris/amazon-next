@@ -1,8 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Cart from '~/components/Cart';
 
 export default function CheckoutLayout({ step, children }) {
+    const { products } = useSelector(state => state.cart);
     return (
         <div className="flex flex-col w-full h-full">
             <div className="flex flex-col lg:grid grid-cols-2 h-full">
@@ -13,7 +15,7 @@ export default function CheckoutLayout({ step, children }) {
                     {children}
                 </div>
                 <div className="hidden lg:flex flex-col ml-4">
-                    <Cart />
+                    <Cart products={products} />
                 </div>
             </div>
         </div>

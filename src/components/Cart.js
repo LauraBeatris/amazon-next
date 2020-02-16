@@ -10,24 +10,25 @@ export default function Cart({ products }) {
                     You're Buying
                 </h1>
             </div>
-            {products.length > 0 ? (
+            {products && products.length > 0 ? (
                 <ul className="flex flex-col w-full px-5 pb-8">
-                    {products.map(product => (
-                        <Link href={`/details?productId=${product.id}`}>
-                            <li className="flex flex-row items-center cursor-pointer">
-                                <img
-                                    className="w-80 p-2 rounded"
-                                    src={product.image}
-                                    alt={product.name}
-                                    aria-label={product.name}
-                                    title={product.name}
-                                />
-                                <strong className="mb-3 transition-colors duration-300 text-gray-700 hover:text-gray-800">
-                                    {product.name}
-                                </strong>
-                            </li>
-                        </Link>
-                    ))}
+                    {products &&
+                        products.map(product => (
+                            <Link href={`/details?productId=${product.id}`}>
+                                <li className="flex flex-row items-center cursor-pointer">
+                                    <img
+                                        className="w-80 p-2 rounded"
+                                        src={product.image}
+                                        alt={product.name}
+                                        aria-label={product.name}
+                                        title={product.name}
+                                    />
+                                    <strong className="mb-3 transition-colors duration-300 text-gray-700 hover:text-gray-800">
+                                        {product.name}
+                                    </strong>
+                                </li>
+                            </Link>
+                        ))}
                 </ul>
             ) : (
                 <strong className="text-gray-700">Empty cart</strong>
