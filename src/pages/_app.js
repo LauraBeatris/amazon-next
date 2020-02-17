@@ -1,7 +1,18 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+
 import App from 'next/app';
 import Head from 'next/head';
-import '../style.css';
+
+import { store, persistor } from '~/store';
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import '~/styles/style.css';
+
+import '~/lib/firebase';
 
 /* Component Prop -> The active page
   pageProps -> An object with the initial props that were
@@ -13,6 +24,7 @@ import '../style.css';
   Warning => Adding a getInitialProps here will disable
   Automatic Static Optimization
 */
+dynamic(() => import('~/config/ReactotronConfig'), { ssr: false });
 
 class MyApp extends App {
     componentDidCatch(error) {
@@ -27,7 +39,11 @@ class MyApp extends App {
                 <Head>
                     <title> Amazon Next </title>
                 </Head>
-                <Component {...pageProps} />
+                <Provider store={store}>
+                    <PersistGate persistor={persistor}>
+                        <Component {...pageProps} />
+                    </PersistGate>
+                </Provider>
             </>
         );
     }

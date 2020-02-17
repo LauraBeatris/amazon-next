@@ -1,34 +1,113 @@
 {
     "products": [{
         "id": 1,
-        "name": "",
-        "price": 10000,
+        "name": "Acer Aspire 5 Slim Laptop",
+        "price": 31392,
         "stars": 5,
         "type": ["computers", "technologies"],
-        "tags": ["cheep"]
+        "tags": ["cheep"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71vvXGmdKWL._AC_SX679_.jpg",
+        "description": "AMD Ryzen 3 3200U Dual Core Processor (Up to 3.5GHz); 4GB DDR4 Memory; 128GB PCIe NVMe SSD <br /> 15.6 inches Full HD (1920 x 1080) Widescreen LED backlit IPS Display; AMD Radeon Vega 3 Mobile Graphics <br /> 1 USB 3.1 Gen 1 Port, 2 USB 2.0 Ports & 1 HDMI Port with HDCP support <br /> 802.11ac Wi-Fi; Backlit Keyboard; Up to 7.5 Hours Battery Life <br /> Windows 10 in S mode. Maximum Power Supply Wattage 65 W <br />"
     }, {
         "id": 2,
-        "name": "",
-        "price": 10000,
+        "name": "DualShock 4 Wireless Controller for PlayStation 4 - Magma Red",
+        "price": 4696,
         "stars": 5,
-        "type": ["videogames"]
-    }, {
+        "type": ["videogames"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61Na4U9J8%2BL._AC_.jpg",
+        "description": "The feel, shape, and sensitivity of the dual analog sticks and trigger buttons have been improved to provide a greater sense of control, no matter what you play <br /> The new multi touch and clickable touch pad on the face of the DualShock 4 Wireless Controller opens up worlds of new gameplay possibilities for both newcomers and veteran gamers <br /> The DualShock 4 Wireless Controller features a built in speaker and stereo headset jack, putting several new audio options in the player's hands <br /> The Dualshock 4 wireless controller can be easily recharged by plugging it into your PlayStation 4 system, even when in rest mode, or with any standard charger using a USB cable (type A to micro B sold separately)"
+    },{
         "id": 3,
-        "name": "",
-        "price": 10000,
+        "name": "Fjallraven - Kanken Classic Backpack for Everyday",
+        "price": 7995,
         "stars": 5,
-        "type": ["top-sellers", "accessories"]
+        "type": ["top-sellers", "accessories"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71gjJZ4Df2L._AC_UX679_.jpg",
+        "description": "Vinylon F: 100% vinylal <br /> 100% Polyvinyl-alcohol lining <br /> Zipper closure <br /> 12' shoulder drop <br /> 15' high <br /> 11' wide <br /> ICONIC: Same classic Kanken design since 1978. Stash everyday essentials in the main zippered compartment, front zippered pocket, and two open side pockets."
     }, {
         "id": 4,
-        "name": "",
-        "price": 10000,
+        "name": "LEGO DUPLO Big Construction Site",
+        "price": 3799,
         "stars": 5,
-        "type": ["toys", "children"]
+        "type": ["toys", "top-sellers"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/811sHzK0hKL._AC_SX522_.jpg"
     },  {
         "id": 5,
-        "name": "",
-        "price": 10000,
+        "name": "Disney Pixar Toy Story Blast-Off Buzz",
+        "price": 1298,
         "stars": 5,
-        "type": ["toys", "videogames"]
+        "type": ["toys"],
+        "description": "Disney Pixar Toy Story 4 Buzz Lightyear figure with lights and sounds. <br /> In movie-inspired relative scale for authentic flying and action play! <br /> Squeeze his legs and his chest lights up, his wings pop out and he assumes his iconic flying pose! <br /> Speaks 20+ phrases, has a unique talking facial expression and makes iconic blast off sounds. <br /> Perfect for movie storytelling play. For ages 3 and up."
+    }, {
+        "id": 6,
+        "name": "$20 Nintendo eShop Gift Card [Digital Code]",
+        "price": 2000,
+        "stars": 5,
+        "type": ["videogames"],
+        "image": "https://m.media-amazon.com/images/I/71YSvFcuK7L._AC_UY218_ML3_.jpg",
+        "description": "This item can be redeemed on eShop only. This item cannot be redeemed on the Wii Shop <br /> The perfect gift for anyone who loves to play—including you. Choose from over 1,000 new, classic and indie games – delivered directly to your Nintendo Switch, Wii U or Nintendo 3DS family of systems. <br /> Nintendo eShop Digital Cards are redeemable only through the Nintendo eShop on the Nintendo Switch, Wii U, and Nintendo 3DS family of systems. <br /> Digital Card balances can be shared across Nintendo Switch, Wii U and Nintendo 3DS family of systems, but may only be used on a single Nintendo eShop account."
+    }, {
+        "id": 7,
+        "name": "Nintendo Switch Lite - Turquoise",
+        "price": 19900,
+        "stars": 5,
+        "type": ["videogames"],
+        "image": "https://m.media-amazon.com/images/I/71qmF0FHj7L._AC_UY218_ML3_.jpg",
+        "description": "Handheld Nintendo Switch gaming <br /> Optimized for personal, handheld play; Nintendo Switch Lite is a small and light Nintendo Switch system <br /> Features a sleek, unibody design with fully integrated controls and a built in plus Control Pad <br /> Compatible with all physical and digital Nintendo Switch games that support Handheld mode <br />"
+    },{
+        "id": 8,
+        "name": "Nintendo Entertainment System: NES Classic Edition",
+        "price": 970,
+        "stars": 5,
+        "type": ["videogames"],
+        "image": "https://m.media-amazon.com/images/I/81s7B+Als-L._AC_UY218_ML3_.jpg",
+        "description": "The Nintendo Entertainment System: NES Classic Edition has the original look and feel, only smaller, sleeker, and pre loaded with 30 games <br /> The pre installed games include: Super Mario Bros., Donkey Kong, The Legend of Zelda, PAC MAN, Dr. Mario, Mega Man, Final Fantasy, and dozens more <br /> Includes a standard HDMI cable <br /> Comes with one old school, grey colored NES Classic Controller and an AC adapter <br /> Also compatible with Classic Controller and Classic Controller Pro. Additional NES Classic Controllers will be sold separately <br />"
+    },
+    {
+        "id": 9,
+        "name": "Innovative Technology VSC-550BT-TQ Victrola Vintage",
+        "price": 3996,
+        "stars": 5,
+        "type": ["top-sellers", "accessories"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61FSnPYsXzL._AC_SY200_.jpg",
+        "description": "Three-speed turntable (33 1/3, 45, 78 RPM) plays all of your vinyl records and favorite albums. <br /> Built-in Bluetooth to wirelessly play music from your Bluetooth enabled device. No cords needed. <br /> Portable suitcase design with easy carry handle. <br /> 3.5mm Aux-in for playing music from any non-Bluetooth device, RCA output and headphone jack. <br /> Built-in stereo speakers.No battery used.Power,on,off,volume control knob.Auto or manual stop selection switch. <br />"
+    },
+    {
+        "id": 10,
+        "name": "Kasa Smart Light Switch by TP-Link",
+        "price": 1999,
+        "stars": 5,
+        "type": ["top-sellers", "accessories"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61GXFj097RL._AC_SY200_.jpg",
+        "description": "Control FROM Anywhere: Turn electronics on or off from Anywhere with Your Smartphone using the Kasa app (Compatible w/ Android & iOS) <br /> Voice Control: Works with Amazon Alexa, Google Assistant and MicroSoft Cortana Supported devices for a hands Free Experience <br /> GUIDED INSTALL: No need to understand complex switch wiring or Master vs auxiliary switch configurations; The Kasa app guides you through Easy step by step installation <br /> SCHEDULING: Use Schedules to set Your Smart Switch to automatically turn on and off while you're Home or away <br /> Note: Requires a neutral wire / works in a Single pole setup only / Requires a Secured 2.4 gigahertz Wi Fi network connection; Refer to the PDF attached below in Technical Specification for User Manual <br />"
+    },
+    {
+        "id": 11,
+        "name": "iPhone XR Apple Black",
+        "price": 31392,
+        "stars": 5,
+        "type": ["computers", "technologies"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41piKUNcAVL._AC_SY200_.jpg",
+        "description": "Carrier - This phone is locked to simple Mobile from Tracfone, which means this device can only be used on the Simple Mobile wireless network. <br /> Plans - simple Mobile offers a variety of coverage plans, including 30-day unlimited Talk, text & data. No Activation Fees, No Credit Checks, and no Hassles On a Nationwide Lightning-fast Network. For more information or plan options, please visit the Simple Mobile website. <br /> Activation - You’ll receive a simple Mobile SIM kit with this iPhone. Follow the instructions to get service activated with the simple Mobile plan of your choice. 5-inch Super Retina XDR OLED display <br /> Water and dust resistant (4 meters for up to 30 minutes, IP68) <br /> Triple-camera system with 12MP Ultra wide, wide, and telephoto cameras; night mode, Portrait mode, and 4K video up to 60fps <br /> 12MP True Depth front Camera with Portrait mode, 4K video, and slo-mo"
+
+    },
+    {
+        "id": 12,
+        "name": "Xiaomi Amazfit Bip A1608 Original Band",
+        "price": 34399,
+        "stars": 5,
+        "type": ["computers", "technologies"],
+        "tags": ["cheep"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51HfwLe-TQL._AC_SX679_.jpg",
+        "description": "The Amazfit Bip smartwatch comes with 30-day long battery life on a single charge of 2.5-hours. <br /> Optical heart rate monitoring and built-in GPS to track daily step count, distance traveled, calories burned, and sleep quality. <br /> 4-sport modes - outdoor running, treadmill, cycling and walking with detailed insights into most frequent activities. <br /> Get notifications for emails, SMS messages, and incoming phone calls as well as alerts for Facebook, Twitter, weather forecasts, etc. <br /> This smartwatch comes in 4 colors and a bright always-on 1.28” display and is compatible with both Google Android and Apple iOS. <br />"
+    },
+    {
+        "id": 13,
+        "name": "Smartphone Xiaomi Redmi Note 8 64gb Moonlight (White)",
+        "price": 106900,
+        "stars": 5,
+        "type": ["computers", "technologies"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51dd-GC9iaL._AC_SY200_.jpg",
+        "description": "HSDPA 850 / 900 / 2100 - LTE B1 (2100) B2 (1900 PCS) B3 (1800 +) B4 (1700/2100 AWS 1) B5 (850) B7 (2600) B8 (900) B20 (800 DD) B28 (700 APT) B38 (TD 2600) B40 (TD 2300) Dual SIM (Nano-SIM, dual stand-by)> (ensure to check compatibility with your carrier before purchase) <br /> 6.3 inches 1080 x 2340 pixels, 19.5:9 ratio (~409 ppi density) - Fingerprint (rear-mounted) <br /> 64GB + 4GB RAM - microSD, up to 256 GB - Qualcomm SDM665 Snapdragon Octa-core - Non-removable Li-Po 4000 mAh battery <br /> Rear (Main) Camera: Quad 48MP(wide) + 8MP(ultrawide) + 2MP(dedicated macro camera) + 2MP - Front Camera: 13 MP, f/2.0 - Video: 2160p@30fps, 1080p@30/60/120fps, 720p@960fps <br /> Unlocked cellphones are compatible with most of the GSM carriers ( Like T-Mobile or AT&T ) but please be aware that are not compatible with CDMA carriers ( Like Sprint or Verizon Wireless for example ) - FCC ID: 2AFZZC3JG"
     }]
 }

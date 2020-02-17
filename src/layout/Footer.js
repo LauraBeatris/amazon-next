@@ -13,7 +13,7 @@ export default function Footer() {
             <nav>
                 <ul className="flex flex-row w-full justify-between">
                     <li>
-                        <Link to="/">
+                        <Link href="/">
                             <FontAwesomeIcon
                                 icon={faClipboardList}
                                 size="lg"
@@ -22,7 +22,7 @@ export default function Footer() {
                         </Link>
                     </li>{' '}
                     <li>
-                        <Link to="/cart">
+                        <Link href="/cart">
                             <FontAwesomeIcon
                                 icon={faShoppingBag}
                                 size="lg"
@@ -31,7 +31,7 @@ export default function Footer() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/likes">
+                        <Link href="/likes">
                             <FontAwesomeIcon
                                 icon={faHeart}
                                 size="lg"

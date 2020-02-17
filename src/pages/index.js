@@ -5,70 +5,62 @@ import PropTypes from 'prop-types';
 
 import api from '~/services/api';
 import Layout from '~/layout';
-import withAnalytics from '~/hocs/withAnalytics';
-import Product from '~/components/Product';
+import ProductList from '~/components/Slider';
 
 function Home({ productList, error }) {
     const [showErrorMessage, setErrorMessage] = useState(!!error);
 
     return (
         <Layout>
-            <div
-                className={`h-full flex py-5 px-12 flex-col ${
-                    showErrorMessage
-                        ? 'justify-center items-center'
-                        : 'justify-start items-start'
-                }  overflow`}
-            >
-                {!showErrorMessage && Object.keys(productList).length > 0 ? (
-                    <>
-                        <div className="mb-5 w-full">
-                            <h2 className="text-2xl text-gray-800 font-bold overflow-scroll">
-                                {' '}
-                                Computers and Accessories{' '}
-                            </h2>
-                            {productList.computersAndAccessories.map(
-                                product => (
-                                    <Product product={product} />
-                                )
-                            )}
-                        </div>
-                        <div className="mb-5">
-                            <h2 className="text-2xl text-gray-800 font-bold">
-                                {' '}
-                                Video Games{' '}
-                            </h2>
-                            {productList.videoGames.map(product => (
-                                <Product product={product} />
-                            ))}
-                        </div>
+            {!showErrorMessage && Object.keys(productList).length > 0 ? (
+                <div className="w-full py-16 px-5 lg:py-0 lg:px-0">
+                    <div className="mb-8 w-full">
+                        <h2 className="text-2xl mb-2 lg:pr-8 pr-0 text-gray-800 font-bold">
+                            {' '}
+                            Computers and Accessories{' '}
+                        </h2>
+                        <ProductList
+                            type="computersAndAccessories"
+                            productList={productList}
+                        />
+                    </div>
+                    <div className="w-full my-8">
+                        <h2 className="text-2xl mb-2 lg:pr-8 pr-0 text-gray-800 font-bold">
+                            {' '}
+                            Video Games{' '}
+                        </h2>
+                        <ProductList
+                            type="videoGames"
+                            productList={productList}
+                        />
+                    </div>
 
-                        <div className="mb-5">
-                            <h2 className="text-2xl text-gray-800 font-bold">
-                                {' '}
-                                Amazon Top Sellers{' '}
-                            </h2>
-                            {productList.topSellers.map(product => (
-                                <Product product={product} />
-                            ))}
-                        </div>
-                    </>
-                ) : (
-                    <span className="text-xl text-center">
-                        {' '}
-                        <FontAwesomeIcon
-                            icon={faExclamationTriangle}
-                            color="red"
-                        />{' '}
-                        There was an error while consulting the products{' '}
-                    </span>
-                )}
-            </div>
+                    <div className="w-full pb-5">
+                        <h2 className="text-2xl mb-2 lg:pr-8 pr-0 text-gray-800 font-bold">
+                            {' '}
+                            Amazon Top Sellers{' '}
+                        </h2>
+                        <ProductList
+                            type="topSellers"
+                            productList={productList}
+                        />
+                    </div>
+                </div>
+            ) : (
+                <span className="text-xl text-center">
+                    {' '}
+                    <FontAwesomeIcon
+                        icon={faExclamationTriangle}
+                        color="red"
+                    />{' '}
+                    There was an error while consulting the products{' '}
+                </span>
+            )}
         </Layout>
     );
 }
 
-Home.getInitialProps = async () => {
+Home.getInitialProps = async ({ req }) => {
     try {
         const response = await api.get('/products');
         const products = response.data;
@@ -105,4 +97,4 @@ Home.propTypes = {
     error: PropTypes.shape(),
 };
 
-export default withAnalytics()(Home);
+export default Home;
