@@ -11,6 +11,7 @@ import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import PropTypes from 'prop-types';
 
 import Link from 'next/link';
+import { database } from '~/lib/firebase';
 
 import Layout from '~/layout';
 import api from '~/services/api';
@@ -166,8 +167,10 @@ Details.getInitialProps = async ({ query }) => {
     const { productId } = query;
 
     try {
-        const response = await api.get(`/products/${productId}`);
-        return { product: response.data };
+        const productSnapshot = await database
+            .ref(`products/${productId}`)
+            .once('value');
+        return { product: productSnapshot.val() };
     } catch (err) {
         return { error: { message: 'Product not found', data: err } };
     }

@@ -1,26 +1,28 @@
 import * as firebase from 'firebase';
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyAFbbMw2dhOQtxGIVnWkYaielwElo_X3J4',
+    apiKey: process.env.FIREBASE_API_KEY,
     authDomain: 'next-ae1f2.firebaseapp.com',
     databaseURL: 'https://next-ae1f2.firebaseio.com',
     projectId: 'next-ae1f2',
     storageBucket: 'next-ae1f2.appspot.com',
-    messagingSenderId: '761032967022',
-    appId: '1:761032967022:web:859d1ce3a5ba7f5c98f77f',
-    measurementId: 'G-E8ZE4TQ0TW',
+    messagingSenderId: process.env.FIREBASE_MESSAGE_SENDER_ID,
+    appId: process.env.FIREBASE_APP_ID,
+    measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 };
 
-// Verifying if the app to see if its loaded and then initialize it
+// Verifying if the app to see if its already loaded and then initialize it
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
 
-// Verifying the connection
-// firebase.database() => Firebase database related features
-firebase
-    .database()
-    .ref()
-    .set({
-        name: 'iPhone',
-    });
+export const database = firebase.database();
+
+// Nested Value
+// database.ref('location/city').set('Hey')
+
+// database.ref('attributes/height').set('1.65')
+// database.ref('attributes/width').set('76')
+// database.ref('attributes').set({ width: 78, height: 168 })
+
+// database.ref().update({'location/city': 'Boston'})
