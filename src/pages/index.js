@@ -7,6 +7,8 @@ import api from '~/services/api';
 import Layout from '~/layout';
 import ProductList from '~/components/Slider';
 
+import productsService from '~/services/products';
+
 function Home({ productList, error }) {
     const [showErrorMessage, setErrorMessage] = useState(!!error);
 
@@ -60,11 +62,9 @@ function Home({ productList, error }) {
     );
 }
 
-Home.getInitialProps = async ({ req }) => {
+Home.getInitialProps = async () => {
     try {
-        const response = await api.get('/products');
-        const products = response.data;
-
+        const products = await productsService();
         const computersAndAccessories = products.filter(
             product =>
                 product.type.includes('computers') ||
