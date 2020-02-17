@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npm-run-all --parallel server & next",
     "build": "next build",
-    "start": "npm-run-all --parallel server & next start",
+    "start": "next start",
     "export": "npm run build && next export",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "json-server --watch db.json --port=8080"

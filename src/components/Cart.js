@@ -11,7 +11,7 @@ export default function Cart({ products }) {
                 </h1>
             </div>
             {products && products.length > 0 ? (
-                <ul className="flex flex-col w-full px-5 pb-8">
+                <ul className="flex flex-grow flex-col w-full px-5 pb-8">
                     {products &&
                         products.map(product => (
                             <Link href={`/details?productId=${product.id}`}>
