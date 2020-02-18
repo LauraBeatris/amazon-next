@@ -9,9 +9,10 @@ import Head from 'next/head';
 import { store, persistor } from '~/store';
 
 import '~/styles/style.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import '~/lib/firebase';
+
+require('slick-carousel/slick/slick.css');
+require('slick-carousel/slick/slick-theme.css');
 
 /* Component Prop -> The active page
   pageProps -> An object with the initial props that were
