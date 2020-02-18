@@ -23,3 +23,12 @@ export function submitStepFailure() {
         type: '@checkout/SUBMIT_STEP_FAILURE',
     };
 }
+
+export function submitCheckoutValue(values) {
+    return {
+        type: '@checkout/SUBMIT_CHECKOUT_VALUE',
+        payload: {
+            ...values,
+        },
+    };
+}

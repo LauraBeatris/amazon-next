@@ -1,19 +1,37 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState, useMemo } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+
 import Layout from '~/layout';
 import Cart from '~/components/Cart';
 import Button from '~/components/Button';
 
-export default function CartPage() {
-    const router = useRouter();
-    const { products } = useSelector(state => state.cart);
+import { submitCheckoutValue } from '~/store/modules/checkout/actions';
 
+export default function CartPage() {
+    const dispatch = useDispatch();
+    const router = useRouter();
+    const [editShippingAddress, setEditShippingAddress] = useState(false);
+    const [streetName, setStreetName] = useState('');
+
+    const { products } = useSelector(state => state.cart);
+    const { street, district } = useSelector(state => state.checkout.address);
+    console.log(street);
     function handleSubmit() {
         return router.push({ pathname: '/checkout/step1' });
+    }
+
+    function handleShippingAddress() {
+        setEditShippingAddress(!editShippingAddress);
+
+        if (editShippingAddress) {
+            return dispatch(
+                submitCheckoutValue({ address: { street: streetName } })
+            );
+        }
     }
 
     return (
@@ -38,6 +56,7 @@ export default function CartPage() {
                                     <span className="block text-gray-500">
                                         Shipping Date
                                     </span>
+
                                     <span className="text-gray-800">
                                         Tomorrow, 12AM - GPM
                                     </span>
@@ -47,15 +66,33 @@ export default function CartPage() {
                                         <span className="block text-gray-500">
                                             Shipping Address
                                         </span>
-                                        <span className="text-gray-800">
-                                            5643, Higland, Geordia Dr
-                                        </span>
+                                        {editShippingAddress ? (
+                                            <input
+                                                className="bg-white text-gray-700 font-light w-200"
+                                                type="text"
+                                                placeholder="Type your street name"
+                                                onChange={e =>
+                                                    setStreetName(
+                                                        e.target.value
+                                                    )
+                                                }
+                                                value={streetName}
+                                            />
+                                        ) : (
+                                            <span className="text-gray-800">
+                                                {!!street || !!district
+                                                    ? `${street} ${district &&
+                                                          `, ${district}`}`
+                                                    : 'No address registered'}
+                                            </span>
+                                        )}
                                     </div>
                                     <button
                                         className="transition-colors duration-300 hover:text-blue-600 text-blue-500 outline-none border-none ml-4 font-bold border-none"
                                         type="button"
+                                        onClick={handleShippingAddress}
                                     >
-                                        Edit
+                                        {editShippingAddress ? 'Send' : 'Edit'}
                                     </button>{' '}
                                 </li>
                                 <li className="mt-5">

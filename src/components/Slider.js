@@ -67,8 +67,8 @@ export default function SliderComponent({ productList, type }) {
         arrows: true,
         speed: 500,
         infinite: true,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
+        nextArrow: <SampleNextArrow to="next" />,
+        prevArrow: <SamplePrevArrow to="next" />,
         responsive: [
             {
                 breakpoint: 1024,
@@ -103,3 +103,8 @@ export default function SliderComponent({ productList, type }) {
         </Slider>
     );
 }
+
+SliderComponent.propTypes = {
+    productList: PropTypes.array.isRequired,
+    type: PropTypes.string.isRequired,
+};

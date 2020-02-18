@@ -28,6 +28,19 @@ export default function checkout(state = INITIAL_STATE, action) {
                 draft = { ...draft, ...payload.data };
                 return draft;
             }
+            case '@checkout/SUBMIT_CHECKOUT_VALUE': {
+                const { payload } = action;
+                console.log(payload);
+                draft = {
+                    ...state,
+                    [Object.keys(payload)[0]]: {
+                        ...state[Object.keys(payload)],
+                        ...payload[Object.keys(payload)],
+                    },
+                };
+                console.log(draft);
+                return draft;
+            }
             default:
                 return state;
         }
