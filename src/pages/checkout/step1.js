@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form } from '@rocketseat/unform';
+import { useRouter } from 'next/router';
 
 import costumerSchema from '~/validators/costumer';
 
@@ -13,6 +14,8 @@ import { submitStepRequest } from '~/store/modules/checkout/actions';
 
 export default function CheckoutFirstStep() {
     const dispatch = useDispatch();
+    const router = useRouter();
+    const { products } = useSelector(state => state.cart);
     const initialData = useSelector(state => state.checkout.costumer);
     const [formSubmit, setSubmitForm] = useState(false);
 
@@ -22,6 +25,15 @@ export default function CheckoutFirstStep() {
         setSubmitForm(true);
         return dispatch(submitStepRequest({ costumer: data }, 'step2'));
     }
+
+    useEffect(() => {
+        if (products.length < 1) {
+            alert(
+                'Your cart is empty. You have to add a product to proceed with the checkout steps'
+            );
+            router.push({ pathname: '/' });
+        }
+    }, [products.length, router]);
 
     return (
         <ApplicationLayout className="lg:pr-0 lg:py-0">

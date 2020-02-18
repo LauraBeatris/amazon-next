@@ -62,7 +62,9 @@ export default function Cart({ products }) {
                         ))}
                 </ul>
             ) : (
-                <strong className="text-gray-700">Empty cart</strong>
+                <strong className="text-gray-700 text-center">
+                    Empty cart
+                </strong>
             )}
             <div className="flex flex-col bg-gray-300 p-5">
                 <ul className="w-full">
@@ -73,11 +75,16 @@ export default function Cart({ products }) {
                     <li className="flex flex-row justify-between text-gray-600 mb-2">
                         Products Cost{' '}
                         <span className="text-gray-800">
-                            {formattedPrices.productsCost}
+                            {products.length
+                                ? formattedPrices.productsCost
+                                : '$0.00'}
                         </span>
                     </li>
                     <li className="flex flex-row justify-between text-gray-600 mb-4">
-                        Shipping Cost <span className="text-gray-800">$50</span>
+                        Shipping Cost{' '}
+                        <span className="text-gray-800">
+                            {products.length ? '$50' : '$0.00'}
+                        </span>
                     </li>
                     <li className="flex flex-row justify-between text-xl text-gray-600 mb-4">
                         Total Cost{' '}
