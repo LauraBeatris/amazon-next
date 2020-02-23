@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  E-Commerce Application made with NextJS (SSR Framework for ReactJS)
+  A Mock of E-Commerce Application made with NextJS (SSR Framework for ReactJS)
 </h3>
 
 
