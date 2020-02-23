@@ -27,13 +27,10 @@
 </p>
 
 <p align="center">
-  <img align="center" src="https://i.ibb.co/tM9Bynr/Web-Signin.png" alt="Web-Signin" border="0">
+  <img align="center" src="https://imgur.com/a/zX14vmB" alt="Product List" border="0">
 </p>
 <br>
-<p align="center">
-  <img align="center" src="https://i.ibb.co/gP77Lt5/Web-Plans.png" alt="Web-Plans" border="0">
-</p>
-<br>
+
 
 ## :rocket: About the project
   The goal of this project was to learn the fundamentals of NextJS and integrate with external services like the database feature provided by Firebase. The page transitions are made Framer Motion that provides a great api support to Server Side Rendering.
