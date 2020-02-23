@@ -1,36 +1,88 @@
-# Next.js Starter Tailwind
+<h1 align="center">
+  <img alt="Amazon Next" title="Amazon Next" src=".static/amazon.png" width="200px" style="border-radius:100px"/>
+</h1>
 
-![alt text](https://github.com/taylorbryant/next-starter-tailwind/blob/master/public/screenshot.png "Screenshot of Tailwind Next.js Starter homepage")
+<h3 align="center">
+  E-Commerce Application made with NextJS (SSR Framework for ReactJS)
+</h3>
 
- <div align="center">
-  <strong>A <a href="https://nextjs.org" target="_blank">Next.js</a> starter styled using <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>, a utility-first CSS framework.</strong><br />
-  Uses <a href="https://www.purgecss.com/" target="_blank">Purgecss</a> to remove unused CSS.<br />
-  Illustrations by <a href="https://undraw.co/" target="_blank">unDraw</a>.<br />
-  View demo <a href="https://next-starter-tailwind.oddstronaut.com/" target="_blank">here</a>.
-  <br />
-  <br />
-</div>
 
-## What is Tailwind?
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/LauraBeatris/amazon-next?color=%232d3748">
 
-> "Tailwind is a utility-first CSS framework for rapidly building custom user interfaces."
-> –[Tailwind](https://tailwindcss.com)
+  <a href="https://www.linkedin.com/in/laurabeatris/">
+    <img alt="Made by Laura Beatris" src="https://img.shields.io/badge/made%20by-LauraBeatris-%232d3748">
+  </a>
 
-## In the wild
+  <a href="https://github.com/LauraBeatris/amazon-next/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/LauraBeatris/amazon-next?style=social">
+  </a>
+</p>
 
-I built [my personal website](https://github.com/taylorbryant/bryant.io) using this starter.
+<p align="center">
+  <a href="#rocket-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#runner-installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#construction-testing">Testing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licence">Licence</a>
+</p>
 
-## Deploy
+<p align="center">
+  <img align="center" src="https://i.ibb.co/tM9Bynr/Web-Signin.png" alt="Web-Signin" border="0">
+</p>
+<br>
+<p align="center">
+  <img align="center" src="https://i.ibb.co/gP77Lt5/Web-Plans.png" alt="Web-Plans" border="0">
+</p>
+<br>
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/taylorbryant/next-starter-tailwind)
+## :rocket: About the project
+  The goal of this project was to learn the fundamentals of NextJS and integrate with external services like the database feature provided by Firebase. The page transitions are made Framer Motion that provides a great api support to Server Side Rendering.
 
-## License
+## :runner: Installation 
 
-[MIT](https://github.com/taylorbryant/next-starter-tailwind/blob/master/LICENSE.md)
+```   
+  // 1 - Git Clone
+  
+  // 2 - If you're going to use firebase to provide product data, be sure do create a env with the service data. 
+        
+  // 3 - Installing the dependencies
+  yarn install
+  
+  // 4 - Run the application in the development mode 
+  yarn dev
+  
+```
 
-## How you can help
+## Deploy 
+[Zeit](https://zeit.co/) provides a easy way to deploy NextJS applications. You need to create a now.json file with the build configuration. 
 
-Enjoying this starter and want to help? You can:
+```
+{
+    "build": {
+        "env": {
+            "SITE_URL": "@site_url",
+            "FIREBASE_API_KEY": "@firebase_api_key",
+            "FIREBASE_APP_KEY": "@firebase_app_id",
+            "FIREBASE_MEASUREMENT_ID": "@firebase_measurement_id",
+            "FIREBASE_MESSAGE_SENDER_ID": "@firebase_message_sender_id"
+        }
+    }
+}
 
-- [Create an issue](https://github.com/taylorbryant/next-starter-tailwind/issues/new) with some constructive criticism
-- [Submit a pull request](https://github.com/taylorbryant/next-starter-tailwind/compare) with some improvements to the project
+```
+
+To map environment variables, you need to create secrets with the commands provided by the [Now CLI](https://zeit.co/download)
+
+```
+now secrets add <secret-name> <secret-value>
+```
+
+And then use them as the values of the env variables that you want to map inside of the build configuration.
+
+## :memo: Licence
+
+MIT Licence. See the file [LICENSE](LICENSE.md) for more details.
+
+---
+
+Made with ♥ by Laura :wave: [See my linkedin!](https://www.linkedin.com/in/laurabeatris/)
