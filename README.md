@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Amazon Next" title="Amazon Next" src="./static/amazon.png" width="200px" style="border-radius:100px"/>
+  <img alt="Amazon Next" title="Amazon Next" src="./static/amazon.png" width="150px" style="border-radius:100px"/>
 </h1>
 
 <h3 align="center">
