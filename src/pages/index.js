@@ -1,53 +1,102 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
-import api from '~/services/api';
 import Layout from '~/layout';
 import ProductList from '~/components/Slider';
 
 import productsService from '~/services/products';
 
-function Home({ productList, error }) {
-    const [showErrorMessage, setErrorMessage] = useState(!!error);
+import slide from '~/animations/slide';
+import stagger from '~/animations/stagger';
 
+function Home({ productList, error }) {
     return (
         <Layout>
-            {!showErrorMessage && Object.keys(productList).length > 0 ? (
-                <div className="w-full py-16 px-5 lg:py-0 lg:px-0">
-                    <div className="mb-8 w-full">
-                        <h2 className="text-2xl mb-2 lg:pr-8 pr-0 text-gray-800 font-bold">
+            {!error && Object.keys(productList).length > 0 ? (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{
+                        opacity: 1,
+                        transition: { staggerChildren: 5 },
+                    }}
+                    exit={{ opacity: 1 }}
+                    className="w-full py-16 px-5 lg:py-0 lg:px-0"
+                >
+                    <motion.div
+                        variants={slide}
+                        initial="initial"
+                        animate="slidein"
+                        exit="slideout"
+                        key="technology"
+                        className="mb-8 w-full"
+                    >
+                        <motion.h2
+                            variants={slide}
+                            initial="initial"
+                            animate="slidein"
+                            exit="slideout"
+                            className="text-2xl mb-2 lg:pr-8 pr-0 text-gray-800 font-bold"
+                        >
                             {' '}
                             Computers and Accessories{' '}
-                        </h2>
+                        </motion.h2>
                         <ProductList
                             type="computersAndAccessories"
                             productList={productList}
                         />
-                    </div>
-                    <div className="w-full my-8">
-                        <h2 className="text-2xl mb-2 lg:pr-8 pr-0 text-gray-800 font-bold">
+                    </motion.div>
+                    <motion.div
+                        variants={slide}
+                        initial="initial"
+                        animate="slidein"
+                        exit="slideout"
+                        key="videogames"
+                        className="w-full my-8"
+                    >
+                        <motion.h2
+                            variants={slide}
+                            initial="initial"
+                            animate="slidein"
+                            exit="slideout"
+                            className="text-2xl mb-2 lg:pr-8 pr-0 text-gray-800 font-bold"
+                        >
                             {' '}
                             Video Games{' '}
-                        </h2>
+                        </motion.h2>
                         <ProductList
                             type="videoGames"
                             productList={productList}
                         />
-                    </div>
+                    </motion.div>
 
-                    <div className="w-full pb-5">
-                        <h2 className="text-2xl mb-2 lg:pr-8 pr-0 text-gray-800 font-bold">
+                    <motion.div
+                        variants={slide}
+                        initial="initial"
+                        animate="slidein"
+                        exit="slideout"
+                        key="topsellers"
+                        transition="transition"
+                        className="w-full pb-5"
+                    >
+                        <motion.h2
+                            variants={slide}
+                            initial="initial"
+                            animate="slidein"
+                            exit="slideout"
+                            className="text-2xl mb-2 lg:pr-8 pr-0 text-gray-800 font-bold"
+                        >
                             {' '}
                             Amazon Top Sellers{' '}
-                        </h2>
+                        </motion.h2>
                         <ProductList
                             type="topSellers"
                             productList={productList}
                         />
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             ) : (
                 <span className="text-xl text-center">
                     {' '}
@@ -83,7 +132,6 @@ Home.getInitialProps = async () => {
             productList: { videoGames, computersAndAccessories, topSellers },
         };
     } catch (err) {
-        console.log(err);
         return { error: err };
     }
 };

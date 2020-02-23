@@ -4,10 +4,13 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 
 import formatMoney from '~/helpers/formatMoney';
 
 import { removeFromCartRequest } from '~/store/modules/cart/actions';
+import stagger from '~/animations/stagger';
+import fadeUp from '~/animations/fadeUp';
 
 export default function Cart({ products }) {
     const dispatch = useDispatch();
@@ -25,17 +28,33 @@ export default function Cart({ products }) {
     }
 
     return (
-        <div className="h-full bg-gray-200 flex flex-col justify-between">
+        <motion.div
+            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="h-full bg-gray-200 flex flex-col justify-between"
+        >
             <div className="py-8 px-5">
                 <h1 className="text-2xl font-bold text-gray-500">
                     You're Buying
                 </h1>
             </div>
             {products && products.length > 0 ? (
-                <ul className="flex flex-grow flex-col w-full px-5 pb-8">
+                <motion.ul
+                    variants={stagger}
+                    animate="animate"
+                    className="flex flex-grow flex-col w-full px-5 pb-8"
+                >
                     {products &&
                         products.map(product => (
-                            <li className="flex flex-row items-center justify-between cursor-pointer">
+                            <motion.li
+                                key={product}
+                                className="flex flex-row items-center justify-between cursor-pointer"
+                                variants={fadeUp}
+                                initial="fadeup"
+                                animate="normal"
+                                exit="exit"
+                            >
                                 <Link href={`/details?productId=${product.id}`}>
                                     <a className="flex flex-row items-center">
                                         <img
@@ -58,9 +77,9 @@ export default function Cart({ products }) {
                                 >
                                     <FontAwesomeIcon icon={faTrash} size="sm" />
                                 </button>
-                            </li>
+                            </motion.li>
                         ))}
-                </ul>
+                </motion.ul>
             ) : (
                 <strong className="text-gray-700 text-center">
                     Empty cart
@@ -94,7 +113,7 @@ export default function Cart({ products }) {
                     </li>
                 </ul>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

@@ -1,15 +1,18 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 import Layout from '~/layout';
 import Cart from '~/components/Cart';
 import Button from '~/components/Button';
 
 import { submitCheckoutValue } from '~/store/modules/checkout/actions';
+import fadeUp from '~/animations/fadeUp';
+import slide from '~/animations/slide';
 
 export default function CartPage() {
     const dispatch = useDispatch();
@@ -19,7 +22,6 @@ export default function CartPage() {
 
     const { products } = useSelector(state => state.cart);
     const { street, district } = useSelector(state => state.checkout.address);
-    console.log(street);
     function handleSubmit() {
         return router.push({ pathname: '/checkout/step1' });
     }
@@ -36,9 +38,23 @@ export default function CartPage() {
 
     return (
         <Layout style={{ padding: 0 }}>
-            <div className="w-full flex flex-col h-full lg:flex-row">
-                <div className="lg:w-2/3 w-full flex flex-col justify-between pt-8 pb-10 px-12">
-                    <div className="flex flex-col">
+            <motion.div
+                exit={{ opacity: 0 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="w-full flex flex-col h-full lg:flex-row"
+            >
+                <motion.div
+                    animate="animate"
+                    initial="initial"
+                    className="lg:w-2/3 w-full flex flex-col justify-between pt-8 pb-10 px-12"
+                >
+                    <motion.div
+                        variants={slide}
+                        initial="initial"
+                        animate="slidein"
+                        className="flex flex-col"
+                    >
                         <h1 className="font-bold text-3xl text-gray-500 mb-10">
                             Make Order
                         </h1>
@@ -114,8 +130,13 @@ export default function CartPage() {
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div className="my-8 w-full flex flex-col lg:flex-row justify-between pr-5">
+                    </motion.div>
+                    <motion.div
+                        variants={slide}
+                        initial="initial"
+                        animate="slidein"
+                        className="my-8 w-full flex flex-col lg:flex-row justify-between pr-5"
+                    >
                         <div className="flex flex-col justify-start">
                             <span className="text-gray-600">Credit Card</span>
                             <strong className="text-gray-800">
@@ -129,10 +150,14 @@ export default function CartPage() {
                         >
                             Edit
                         </button>
-                    </div>
+                    </motion.div>
                     <div className="w-full flex flex-col lg:flex-row justify-between pr-5">
                         <Link href="/">
-                            <div className="transition-colors cursor-pointer duration-300 flex flex-row items-center text-gray-400 hover:text-gray-500">
+                            <motion.div
+                                whileHover={{ x: 10 }}
+                                whileTap={{ x: 0 }}
+                                className="transition-colors cursor-pointer duration-300 flex flex-row items-center text-gray-400 hover:text-gray-500"
+                            >
                                 <FontAwesomeIcon
                                     icon={faArrowLeft}
                                     size="lg"
@@ -141,7 +166,7 @@ export default function CartPage() {
                                 <span className="text-xl">
                                     Back to products list
                                 </span>
-                            </div>
+                            </motion.div>
                         </Link>
 
                         <Button
@@ -152,11 +177,11 @@ export default function CartPage() {
                             Goto checkout
                         </Button>
                     </div>
-                </div>
+                </motion.div>
                 <div className="lg:w-1/3 lg:flex flex-col hidden h-full">
                     <Cart products={products} />
                 </div>
-            </div>
+            </motion.div>
         </Layout>
     );
 }
