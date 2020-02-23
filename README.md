@@ -80,10 +80,6 @@ now secrets add <secret-name> <secret-value>
 
 And then use them as the values of the env variables that you want to map inside of the build configuration.
 
-## :memo: Licence
-
-MIT Licence. See the file [LICENSE](LICENSE.md) for more details.
-
 ---
 
 Made with ♥ by Laura :wave: [See my linkedin!](https://www.linkedin.com/in/laurabeatris/)
