@@ -22,8 +22,7 @@
 <p align="center">
   <a href="#rocket-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#runner-installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#construction-testing">Testing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licence">Licence</a>
+  <a href="#hammer-deploy">Deploy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 <br>
@@ -54,7 +53,7 @@ Also, i choosed tailwind for styling the most part of the app because of the agi
   
 ```
 
-## Deploy 
+## :hammer: Deploy 
 [Zeit](https://zeit.co/) provides a easy way to deploy NextJS applications. You need to create a now.json file with the build configuration. 
 
 ```
@@ -81,5 +80,7 @@ now secrets add <secret-name> <secret-value>
 And then use them as the values of the env variables that you want to map inside of the build configuration.
 
 ---
+
+If you have some problem with the application, don't be afraid to contribute sending a issue/pull request, i'll be happy to help. 😃
 
 Made with ♥ by Laura :wave: [See my linkedin!](https://www.linkedin.com/in/laurabeatris/)
