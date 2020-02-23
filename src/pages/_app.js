@@ -2,7 +2,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-
+import { AnimatePresence } from 'framer-motion';
 import App from 'next/app';
 import Head from 'next/head';
 
@@ -41,7 +41,9 @@ class MyApp extends App {
                 </Head>
                 <Provider store={store}>
                     <PersistGate persistor={persistor}>
-                        <Component {...pageProps} />
+                        <AnimatePresence exitBeforeEnter>
+                            <Component {...pageProps} />
+                        </AnimatePresence>
                     </PersistGate>
                 </Provider>
             </>
