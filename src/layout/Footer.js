@@ -14,29 +14,35 @@ export default function Footer() {
                 <ul className="flex flex-row w-full justify-between">
                     <li>
                         <Link href="/">
-                            <FontAwesomeIcon
-                                icon={faClipboardList}
-                                size="lg"
-                                className="text-gray-800"
-                            />
+                            <>
+                                <FontAwesomeIcon
+                                    icon={faClipboardList}
+                                    size="lg"
+                                    className="text-gray-800"
+                                />
+                            </>
                         </Link>
                     </li>{' '}
                     <li>
                         <Link href="/cart">
-                            <FontAwesomeIcon
-                                icon={faShoppingBag}
-                                size="lg"
-                                className="text-gray-800"
-                            />
+                            <>
+                                <FontAwesomeIcon
+                                    icon={faShoppingBag}
+                                    size="lg"
+                                    className="text-gray-800"
+                                />
+                            </>
                         </Link>
                     </li>
                     <li>
                         <Link href="/likes">
-                            <FontAwesomeIcon
-                                icon={faHeart}
-                                size="lg"
-                                className="text-gray-800"
-                            />
+                            <>
+                                <FontAwesomeIcon
+                                    icon={faHeart}
+                                    size="lg"
+                                    className="text-gray-800"
+                                />
+                            </>
                         </Link>
                     </li>
                 </ul>

@@ -196,10 +196,9 @@ export default function Details({ product, error }) {
 
 Details.getInitialProps = async ({ query }) => {
     const { productId } = query;
-
     try {
         const productSnapshot = await database
-            .ref(`products/${productId}`)
+            .ref(`products/${productId - 1}`)
             .once('value');
         return { product: productSnapshot.val() };
     } catch (err) {
