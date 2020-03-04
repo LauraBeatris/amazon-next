@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +10,6 @@ import ProductList from '~/components/Slider';
 import productsService from '~/services/products';
 
 import slide from '~/animations/slide';
-import stagger from '~/animations/stagger';
 
 function Home({ productList, error }) {
     return (

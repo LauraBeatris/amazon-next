@@ -3,7 +3,7 @@
   "description": "An amazon clone with NextJS",
   "main": "index.js",
   "scripts": {
-    "dev": "npm-run-all --parallel server & next",
+    "dev": "next",
     "build": "next build",
     "start": "next start",
     "export": "npm run build && next export",
@@ -61,6 +61,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "url-loader": "^3.0.0"
   }
 }
