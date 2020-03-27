@@ -34,11 +34,9 @@ export default function Likes() {
                             variants={slide}
                             initial="initial"
                             animate="slidein"
+                            key={product.id}
                         >
-                            <Link
-                                key={product}
-                                href={`/details?productId=${product.id}`}
-                            >
+                            <Link href={`/details?productId=${product.id}`}>
                                 <motion.li className="flex flex-row items-center mb-3 cursor-pointer">
                                     <img
                                         className="w-80 p-2 rounded"
