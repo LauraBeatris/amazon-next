@@ -36,8 +36,8 @@
 
 
 ## :rocket: About the project
-  The goal of this project was to learn the fundamentals of NextJS and integrate with external services like the database feature provided by Firebase. The page transitions are made Framer Motion that provides a great api support to Server Side Rendering.
-Also, i choosed tailwind for styling the most part of the app because of the agility that utility classes are able provide.
+  The goal of this project was to learn the fundamentals of NextJS and integrate with external services like the database feature provided by Firebase. The page transitions are made with Framer Motion which provides a great support to Server Side Rendering.
+Also, i choosed Tailwind for styling the most part of the app because of the agility that utility classes are able provide.
 ## :runner: Installation 
 
 ```   
