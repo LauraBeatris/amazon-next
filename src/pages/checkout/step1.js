@@ -28,6 +28,7 @@ export default function CheckoutFirstStep() {
 
     useEffect(() => {
         if (products.length < 1) {
+            // eslint-disable-next-line
             alert(
                 'Your cart is empty. You have to add a product to proceed with the checkout steps'
             );

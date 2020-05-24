@@ -10,7 +10,8 @@ export default function Success() {
                     Order Successfuly Done!
                 </h1>
                 <p className="font-light text-gray-600 mt-2 mb-5">
-                    Now you'll receive an email with the informations about it
+                    Now you&apos;ll receive an email with the informations about
+                    it
                 </p>
 
                 <img

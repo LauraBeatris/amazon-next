@@ -11,7 +11,6 @@ import Cart from '~/components/Cart';
 import Button from '~/components/Button';
 
 import { submitCheckoutValue } from '~/store/modules/checkout/actions';
-import fadeUp from '~/animations/fadeUp';
 import slide from '~/animations/slide';
 
 export default function CartPage() {
@@ -34,6 +33,8 @@ export default function CartPage() {
                 submitCheckoutValue({ address: { street: streetName } })
             );
         }
+
+        return true;
     }
 
     return (

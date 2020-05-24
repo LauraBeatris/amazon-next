@@ -14,21 +14,10 @@ import '~/lib/firebase';
 require('slick-carousel/slick/slick.css');
 require('slick-carousel/slick/slick-theme.css');
 
-/* Component Prop -> The active page
-  pageProps -> An object with the initial props that were
-  preloaded for your page.
-  Its gonna be a empty object if the page is not using getInitialProps
-*/
-
-/*
-  Warning => Adding a getInitialProps here will disable
-  Automatic Static Optimization
-*/
 dynamic(() => import('~/config/ReactotronConfig'), { ssr: false });
 
 class MyApp extends App {
-    componentDidCatch(error) {
-        console.log(error);
+    componentDidCatch() {
         /* Sentry capture exception here */
     }
 

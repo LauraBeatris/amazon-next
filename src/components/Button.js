@@ -8,12 +8,13 @@ export default function Button({
     handleClick,
     ...rest
 }) {
+    const button = type;
     return (
         <button
             className={`bg-blue-500 hover:bg-blue-700 p-2 text-white font-medium ${className} transition-colors duration-500 ease-out outline-none border-none`}
-            type={type}
-            {...rest}
+            type={button}
             onClick={handleClick}
+            {...rest}
         >
             {children}
         </button>
@@ -28,7 +29,7 @@ Button.defaultProps = {
 
 Button.propTypes = {
     className: PropTypes.string,
-    type: PropTypes.string,
+    type: PropTypes.oneOf(['button', 'submit']),
     children: PropTypes.oneOfType([
         PropTypes.element,
         PropTypes.array,

@@ -10,6 +10,7 @@ import {
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
+import DangerousHTML from 'react-dangerous-html';
 
 import Link from 'next/link';
 import { database } from '~/lib/firebase';
@@ -36,7 +37,7 @@ export default function Details({ product, error }) {
 
     const stars = useMemo(() => {
         const initial = [];
-        for (let i = 1; i < product.stars; i++) {
+        for (let i = 1; i < product.stars; i += 1) {
             initial.push(
                 <FontAwesomeIcon
                     key={i}
@@ -47,11 +48,14 @@ export default function Details({ product, error }) {
                 />
             );
         }
+
         return initial;
     }, [product.stars]);
 
     const liked = useSelector(state =>
-        state.user.likedProducts.find(liked => liked.id === product.id)
+        state.user.likedProducts.find(
+            likedProduct => likedProduct.id === product.id
+        )
     );
 
     function handleCart() {
@@ -131,10 +135,9 @@ export default function Details({ product, error }) {
                                 <motion.p
                                     variants={fadeUp}
                                     className="text-md text-gray-500 mt-8"
-                                    dangerouslySetInnerHTML={{
-                                        __html: product.description,
-                                    }}
-                                />
+                                >
+                                    <DangerousHTML html={product.description} />
+                                </motion.p>
                             </motion.header>
                             <motion.footer
                                 variants={fadeUp}

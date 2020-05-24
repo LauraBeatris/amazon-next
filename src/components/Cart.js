@@ -36,7 +36,7 @@ export default function Cart({ products }) {
         >
             <div className="py-8 px-5">
                 <h1 className="text-2xl font-bold text-gray-500">
-                    You're Buying
+                    You&apos;re Buying
                 </h1>
             </div>
             {products && products.length > 0 ? (
@@ -56,18 +56,16 @@ export default function Cart({ products }) {
                                 exit="exit"
                             >
                                 <Link href={`/details?productId=${product.id}`}>
-                                    <a className="flex flex-row items-center">
-                                        <img
-                                            className="w-80 p-2 rounded"
-                                            src={product.image}
-                                            alt={product.name}
-                                            aria-label={product.name}
-                                            title={product.name}
-                                        />
-                                        <strong className="mb-3 transition-colors duration-300 text-gray-700 hover:text-gray-800">
-                                            {product.name}
-                                        </strong>
-                                    </a>
+                                    <img
+                                        className="w-80 p-2 rounded"
+                                        src={product.image}
+                                        alt={product.name}
+                                        aria-label={product.name}
+                                        title={product.name}
+                                    />
+                                    <strong className="mb-3 transition-colors duration-300 text-gray-700 hover:text-gray-800">
+                                        {product.name}
+                                    </strong>
                                 </Link>
 
                                 <button

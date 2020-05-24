@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Progress({ width, order }) {
+export default function Progress({ width }) {
     return (
         <div className="meter animate flex items-center h-2 relative bg-gray-800 p-2 shadow-inner rounded-lg">
             <span
@@ -16,5 +16,4 @@ export default function Progress({ width, order }) {
 
 Progress.propTypes = {
     width: PropTypes.string.isRequired,
-    order: PropTypes.number.isRequired,
 };

@@ -19,7 +19,6 @@ export default function FormGroup({ name, label, submitted, ...rest }) {
     }, [fieldName, ref.current]); // eslint-disable-line
 
     const inputClassName = useMemo(() => {
-        console.log('submitted', submitted);
         let defaultBorder = 'border-b-2 border-gray-400';
         if (error) {
             defaultBorder = 'border-b-2 border-red-500';
@@ -37,6 +36,7 @@ export default function FormGroup({ name, label, submitted, ...rest }) {
                     className={`${
                         !touched ? 'text-xs' : 'text-2xs'
                     } font-bold duration-500 transition-font h-5`}
+                    htmlFor={rest.id}
                 >
                     {label}
                 </label>

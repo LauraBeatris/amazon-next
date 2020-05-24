@@ -28,24 +28,20 @@ export default function LateralMenu() {
                         <ul>
                             <li className="mb-8">
                                 <Link href="/">
-                                    <a>
-                                        <FontAwesomeIcon
-                                            icon={faClipboardList}
-                                            size="lg"
-                                            className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
-                                        />
-                                    </a>
+                                    <FontAwesomeIcon
+                                        icon={faClipboardList}
+                                        size="lg"
+                                        className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
+                                    />
                                 </Link>
                             </li>{' '}
                             <li className="mb-8 relative">
                                 <Link href="/cart">
-                                    <a>
-                                        <FontAwesomeIcon
-                                            icon={faShoppingBag}
-                                            size="lg"
-                                            className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
-                                        />
-                                    </a>
+                                    <FontAwesomeIcon
+                                        icon={faShoppingBag}
+                                        size="lg"
+                                        className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
+                                    />
                                 </Link>
                                 <div className="bg-yellow-burn flex items-center text-white font-bold w-4 h-4 rounded-full p-1 absolute top-0 left-60p text-2xs">
                                     {productsAmount}
@@ -53,13 +49,11 @@ export default function LateralMenu() {
                             </li>
                             <li className="mt-8 relative">
                                 <Link href="/likes">
-                                    <a>
-                                        <FontAwesomeIcon
-                                            icon={faHeart}
-                                            size="lg"
-                                            className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
-                                        />
-                                    </a>
+                                    <FontAwesomeIcon
+                                        icon={faHeart}
+                                        size="lg"
+                                        className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
+                                    />
                                 </Link>
                                 <div className="bg-yellow-burn flex items-center text-white font-bold w-4 h-4 rounded-full p-1 absolute top-0 left-60p text-2xs">
                                     {likesAmount}

@@ -105,6 +105,6 @@ export default function SliderComponent({ productList, type }) {
 }
 
 SliderComponent.propTypes = {
-    productList: PropTypes.object.isRequired,
+    productList: PropTypes.shape({}).isRequired,
     type: PropTypes.string.isRequired,
 };

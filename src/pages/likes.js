@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 
 import Layout from '~/layout';
 import stagger from '~/animations/stagger';
-import fadeUp from '~/animations/fadeUp';
 import slide from '~/animations/slide';
 
 export default function Likes() {
@@ -56,7 +55,7 @@ export default function Likes() {
             ) : (
                 <strong className="text-gray-700 text-2xl">
                     {' '}
-                    There's no liked product yet{' '}
+                    There&apos;s no liked product yet{' '}
                 </strong>
             )}
         </Layout>

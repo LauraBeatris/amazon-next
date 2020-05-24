@@ -12,7 +12,7 @@ export default function Product({ product }) {
 
     const stars = useMemo(() => {
         const initial = [];
-        for (let i = 1; i < product.stars; i++) {
+        for (let i = 1; i < product.stars; i += 1) {
             initial.push(
                 <FontAwesomeIcon
                     key={i}
@@ -23,6 +23,7 @@ export default function Product({ product }) {
                 />
             );
         }
+
         return initial;
     }, [product.stars]);
 
@@ -77,5 +78,6 @@ Product.propTypes = {
         url: PropTypes.string,
         tags: PropTypes.array,
         stars: PropTypes.number,
+        price: PropTypes.number,
     }).isRequired,
 };

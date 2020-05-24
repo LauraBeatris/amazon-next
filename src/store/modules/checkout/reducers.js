@@ -30,7 +30,6 @@ export default function checkout(state = INITIAL_STATE, action) {
             }
             case '@checkout/SUBMIT_CHECKOUT_VALUE': {
                 const { payload } = action;
-                console.log(payload);
                 draft = {
                     ...state,
                     [Object.keys(payload)[0]]: {
@@ -38,7 +37,6 @@ export default function checkout(state = INITIAL_STATE, action) {
                         ...payload[Object.keys(payload)],
                     },
                 };
-                console.log(draft);
                 return draft;
             }
             default:
