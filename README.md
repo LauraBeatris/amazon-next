@@ -1,60 +1,73 @@
-<h1 align="center">
-  <img alt="Amazon Next" title="Amazon Next" src="./static/amazon.png" width="150px" style="border-radius:100px"/>
-</h1>
-
-<h3 align="center">
-  E-Commerce Application made with NextJS (SSR Framework for ReactJS)
-</h3>
-
-
-<p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/LauraBeatris/amazon-next?color=%232d3748">
-
-  <a href="https://www.linkedin.com/in/laurabeatris/">
-    <img alt="Made by Laura Beatris" src="https://img.shields.io/badge/made%20by-LauraBeatris-%232d3748">
-  </a>
-
-  <a href="https://github.com/LauraBeatris/amazon-next/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/LauraBeatris/amazon-next?style=social">
-  </a>
+<p align="left">
+   <img src="./static/amazon.png" width="150px"/>
 </p>
 
-<p align="center">
-  <a href="#rocket-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#runner-installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#hammer-deploy">Deploy</a>&nbsp;&nbsp;&nbsp;
-</p>
+# Amazon Next
 
-<br>
+> Mock and re-concept of Amazon
+
+[![Author](https://img.shields.io/badge/author-LauraBeatris-e0a639?style=flat-square)](https://github.com/LauraBeatris)
+[![Languages](https://img.shields.io/github/languages/count/LauraBeatris/amazon-next?color=%23e0a639&style=flat-square)](#)
+[![Stars](https://img.shields.io/github/stars/LauraBeatris/amazon-next?color=e0a639&style=flat-square)](https://github.com/LauraBeatris/amazon-next/stargazers)
+[![Forks](https://img.shields.io/github/forks/LauraBeatris/amazon-next?color=%23e0a639&style=flat-square)](https://github.com/LauraBeatris/amazon-next/network/members)
+[![Contributors](https://img.shields.io/github/contributors/LauraBeatris/amazon-next?color=e0a639&style=flat-square)](https://github.com/LauraBeatris/amazon-next/graphs/contributors)
+
+<br />
 <p align="center">
   <img align="center" src="https://i.ibb.co/wccRhm9/product-screen.png" alt="Product List" border="0">
 </p>
 <p align="center">
   <img align="center" src="https://i.ibb.co/wSjGYgs/Ac3m-LCZ-Imgur.png" alt="Product List" border="0">
 </p>
-<br>
+
+---
+
+# :pushpin: Table of Contents
+
+* [Features](#rocket-features)
+* [Installation](#construction_worker-installation)
+* [Getting Started](#runner-getting-started)
+* [FAQ](#postbox-faq)
+* [Found a bug? Missing a specific feature?](#bug-issues)
+* [Contributing](#tada-contributing)
+* [License](#closed_book-license)
+
+# :rocket: Features
+
+* 🛒 Add products to your cart.
+* 💝 Add likes to your favorite products.
+* 🎨 Amazing transitions with Framer Motion
+* 💰 A re-concept of the cart interface from Amazon
+
+# :construction_worker: Installation
+
+**You need to install [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) first, then in order to clone the project via HTTPS, run this command:**
+
+```git clone https://github.com/LauraBeatris/amazon-next.git```
+
+SSH URLs provide access to a Git repository via SSH, a secure protocol. If you have a SSH key registered in your Github account, clone the project using this command:
+
+```git clone git@github.com:LauraBeatris/amazon-next.git```
+
+**Install dependencies**
+
+```yarn install```
+
+# :runner: Getting Started
+
+Run the following command in order to start the application in a development environment:
+
+```yarn dev```
 
 
-## :rocket: About the project
-  The goal of this project was to learn the fundamentals of NextJS and integrate with external services like the database feature provided by Firebase. The page transitions are made with Framer Motion which provides a great support to Server Side Rendering.
-Also, i choosed Tailwind for styling the most part of the app because of the agility that utility classes are able provide.
-## :runner: Installation 
+# :postbox: Faq
 
-```   
-  // 1 - Git Clone
-  
-  // 2 - If you're going to use firebase to provide product data, be sure do create a env with the service data. 
-        
-  // 3 - Installing the dependencies
-  yarn install
-  
-  // 4 - Run the application in the development mode 
-  yarn dev
-  
-```
+**Question:** What are the tecnologies used in this project?
 
-## :hammer: Deploy 
-[Zeit](https://zeit.co/) provides a easy way to deploy NextJS applications. You need to create a now.json file with the build configuration. 
+**Answer:** The tecnologies used in this project are [NextJS](https://nextjs.org/) and [Firebase](https://firebase.google.com/docs/database?hl=pt-br).
+
+## :hammer: Deploy
+[Zeit](https://zeit.co/) provides a easy way to deploy NextJS applications. You need to create a now.json file with the build configuration.
 
 ```
 {
@@ -68,7 +81,6 @@ Also, i choosed Tailwind for styling the most part of the app because of the agi
         }
     }
 }
-
 ```
 
 To map environment variables, you need to create secrets with the commands provided by the [Now CLI](https://zeit.co/download)
@@ -79,8 +91,17 @@ now secrets add <secret-name> <secret-value>
 
 And then use them as the values of the env variables that you want to map inside of the build configuration.
 
----
+# :bug: Issues
 
-If you have some problem with the application, don't be afraid to contribute sending a issue/pull request, i'll be happy to help. 😃
+Feel free to **file a new issue** with a respective title and description on the the [Amazon Next](https://github.com/LauraBeatris/amazon-next/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**! Have a look at our [contribution guidelines](https://github.com/LauraBeatris/amazon-next/blob/master/CONTRIBUTING.md) to find out about the coding standards.
 
-Made with ♥ by Laura :wave: [See my linkedin!](https://www.linkedin.com/in/laurabeatris/)
+# :tada: Contributing
+
+Check out the [contributing](https://github.com/LauraBeatris/amazon-next/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
+
+# :closed_book: License
+
+Released in 2020.
+This project is under the [MIT license](https://github.com/LauraBeatris/amazon-next/master/LICENSE).
+
+Made with love by [Laura Beatris](https://github.com/LauraBeatris) 💜🚀
