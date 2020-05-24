@@ -64,7 +64,7 @@ Run the following command in order to start the application in a development env
 
 **Question:** What are the tecnologies used in this project?
 
-**Answer:** The tecnologies used in this project are [NextJS](https://nextjs.org/) and [Firebase](https://firebase.google.com/docs/database?hl=pt-br).
+**Answer:** The tecnologies used in this project are [NextJS](https://nextjs.org/), [Firebase Database](https://firebase.google.com/docs/database?hl=pt-br) to retrieve products data and [Framer Motion](https://www.framer.com/api/motion/) for page transitions.
 
 ## :hammer: Deploy
 [Zeit](https://zeit.co/) provides a easy way to deploy NextJS applications. You need to create a now.json file with the build configuration.
