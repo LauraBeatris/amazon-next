@@ -67,7 +67,7 @@ Run the following command in order to start the application in a development env
 **Answer:** The tecnologies used in this project are [NextJS](https://nextjs.org/), [Firebase Database](https://firebase.google.com/docs/database?hl=pt-br) to retrieve products data and [Framer Motion](https://www.framer.com/api/motion/) for page transitions.
 
 ## :hammer: Deploy
-[Zeit](https://zeit.co/) provides a easy way to deploy NextJS applications. You need to create a now.json file with the build configuration.
+[Zeit](https://zeit.co/) provides a easy way to deploy NextJS applications. You may create a now.json file with the build configuration.
 
 ```
 {
@@ -83,13 +83,13 @@ Run the following command in order to start the application in a development env
 }
 ```
 
-To map environment variables, you need to create secrets with the commands provided by the [Now CLI](https://zeit.co/download)
+You're able to create secrets with the commands provided by the [Now CLI](https://zeit.co/download) in order to map environment variables, 
 
 ```
 now secrets add <secret-name> <secret-value>
 ```
 
-And then use them as the values of the env variables that you want to map inside of the build configuration.
+Use them as the values of the env variables that you want to map inside of the build configuration.
 
 # :bug: Issues
 
