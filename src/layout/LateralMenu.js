@@ -8,6 +8,10 @@ import {
     faHeart,
 } from '@fortawesome/free-solid-svg-icons';
 
+const MyFontawesomeIcon = React.forwardRef((props, _ref) => {
+    return <FontAwesomeIcon {...props} />;
+});
+
 export default function LateralMenu() {
     const productsAmount = useSelector(state => state.cart.products.length);
     const likesAmount = useSelector(state => state.user.likedProducts.length);
@@ -27,8 +31,8 @@ export default function LateralMenu() {
                     <nav>
                         <ul>
                             <li className="mb-8">
-                                <Link href="/">
-                                    <FontAwesomeIcon
+                                <Link href="/" passHref>
+                                    <MyFontawesomeIcon
                                         icon={faClipboardList}
                                         size="lg"
                                         className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
@@ -36,8 +40,8 @@ export default function LateralMenu() {
                                 </Link>
                             </li>{' '}
                             <li className="mb-8 relative">
-                                <Link href="/cart">
-                                    <FontAwesomeIcon
+                                <Link href="/cart" passHref>
+                                    <MyFontawesomeIcon
                                         icon={faShoppingBag}
                                         size="lg"
                                         className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
@@ -48,8 +52,8 @@ export default function LateralMenu() {
                                 </div>
                             </li>
                             <li className="mt-8 relative">
-                                <Link href="/likes">
-                                    <FontAwesomeIcon
+                                <Link href="/likes" passHref>
+                                    <MyFontawesomeIcon
                                         icon={faHeart}
                                         size="lg"
                                         className="text-gray-500 cursor-pointer transition-colors hover:text-gray-600 duration-500 ease-in-out"
