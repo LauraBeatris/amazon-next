@@ -38,7 +38,7 @@ export default function LateralMenu() {
                                 </Link>
                             </li>{' '}
                             <li className="mb-8 relative">
-                                <Link href="/cart" passHref>
+                                <Link href="/cart">
                                     <div>
                                         <FontAwesomeIcon
                                             icon={faShoppingBag}
@@ -52,7 +52,7 @@ export default function LateralMenu() {
                                 </div>
                             </li>
                             <li className="mt-8 relative">
-                                <Link href="/likes" passHref>
+                                <Link href="/likes">
                                     <div>
                                         <FontAwesomeIcon
                                             icon={faHeart}
