@@ -56,7 +56,7 @@ export default function Cart({ products }) {
                                 exit="exit"
                             >
                                 <Link href={`/details?productId=${product.id}`}>
-                                    <>
+                                    <div>
                                         <img
                                             className="w-80 p-2 rounded"
                                             src={product.image}
@@ -67,7 +67,7 @@ export default function Cart({ products }) {
                                         <strong className="mb-3 transition-colors duration-300 text-gray-700 hover:text-gray-800">
                                             {product.name}
                                         </strong>
-                                    </>
+                                    </div>
                                 </Link>
 
                                 <button
