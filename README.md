@@ -34,10 +34,10 @@
 
 # :rocket: Features
 
-* 🛒 Add products to your cart.
-* 💝 Add likes to your favorite products.
-* 🎨 Amazing transitions with Framer Motion
-* 💰 A re-concept of the cart interface from Amazon
+* 🛒&nbsp;Add products to your cart.
+* 💝&nbsp; Add likes to your favorite products.
+* 🎨&nbsp;Amazing transitions with Framer Motion
+* 💰&nbsp; A re-concept of the cart interface from Amazon
 
 # :construction_worker: Installation
 
@@ -62,7 +62,7 @@ Run the following command in order to start the application in a development env
 
 # :postbox: Faq
 
-**Question:** What are the tecnologies used in this project?
+**Question:** What are the technologies used in this project?
 
 **Answer:** The tecnologies used in this project are [NextJS](https://nextjs.org/), [Firebase Database](https://firebase.google.com/docs/database?hl=pt-br) to retrieve products data and [Framer Motion](https://www.framer.com/api/motion/) for page transitions.
 
@@ -93,7 +93,7 @@ Use them as the values of the env variables that you want to map inside of the b
 
 # :bug: Issues
 
-Feel free to **file a new issue** with a respective title and description on the the [Amazon Next](https://github.com/LauraBeatris/amazon-next/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**! Have a look at our [contribution guidelines](https://github.com/LauraBeatris/amazon-next/blob/master/CONTRIBUTING.md) to find out about the coding standards.
+Feel free to **file a new issue** with a respective title and description on the the [Amazon Next](https://github.com/LauraBeatris/amazon-next/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**! Have a look at our [contribution guidelines](https://github.com/LauraBeatris/amazon-next/blob/master/CONTRIBUTING.md) to find out about the coding standards.
 
 # :tada: Contributing
 
