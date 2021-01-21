@@ -25,7 +25,7 @@
     "dotenv": "^8.2.0",
     "firebase": "^7.8.2",
     "framer-motion": "^1.8.4",
-    "immer": "^5.3.6",
+    "immer": "^8.0.1",
     "json-server": "^0.15.1",
     "next": "9.3.2",
     "npm-run-all": "^4.1.5",
